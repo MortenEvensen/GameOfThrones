@@ -1,275 +1,366 @@
-var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d");
-
-
-var circleX = 1125;
-var circleY = 725;
-
-draw();
-
-function draw() {
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height)
-
-    ctx.beginPath();
-    ctx.arc(circleX, circleY, 40, 0, 2 * Math.PI);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(1050, 650, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("1", 1055, 675);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(900, 650, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("2", 1055 - 150, 675);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(750, 650, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("3", 1055 - 150 - 150, 675);
-    ctx.rect(800, 700, 50, 50)
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(600, 650, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("4", 1055 - 150 - 150 - 150, 675);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(450, 650, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("5", 1055 - 150 - 150 - 150 - 150, 675);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(300, 650, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("6", 1055 - 150 - 150 - 150 - 150 - 150, 675);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(150, 650, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("7", 1055 - 150 - 150 - 150 - 150 - 150 - 150, 675);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(0, 650, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("8", 1055 - 150 - 150 - 150 - 150 - 150 - 150 - 150, 675);
-    ctx.stroke();
-
-    // Line 2
-
-    ctx.beginPath();
-    ctx.rect(1050, 500, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("9", 1055, 675 - 150);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(900, 500, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("10", 1055 - 150, 675 - 150);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(750, 500, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("11", 1055 - 150 - 150, 675 - 150);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(600, 500, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("12", 1055 - 150 - 150 - 150, 675 - 150);
-    ctx.rect(650, 550, 50, 50)
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(450, 500, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("13", 1055 - 150 - 150 - 150 - 150, 675 - 150);
-    
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(300, 500, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("14", 1055 - 150 - 150 - 150 - 150 - 150, 675 - 150);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(150, 500, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("15", 1055 - 150 - 150 - 150 - 150 - 150 - 150, 675 - 150);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.rect(0, 500, 150, 150);
-    ctx.font = "20px Verdana";
-    ctx.strokeStyle = "#000000";
-    ctx.strokeText("16", 1055 - 150 - 150 - 150 - 150 - 150 - 150 - 150, 675 - 150);
-    ctx.stroke();
-
-        if ((circleX === 825) && (circleY === 725) && (trapo.length === dicolini) && (trapo.length === 2||1)) {
-        nyFunction();
-        console.log("trapo.length: " + trapo.length);
-        console.log("dicolini: " + dicolini);
-        console.log("HURRA!" );
-        
-        var audio = document.getElementById("myAudioTrap");
-        audio.play();
-        trapo = [];
-    } 
-    /*if (diceNumber === 1 && circleX === 1125 - 150 && circleY === 725 && trapo.length === dicolini)  {
-             trapo = [];
-             }  */ 
-     if ((circleX === 825 - 150) && (circleY === 725 - 150) && trapo.length === dicolini) {
-         nyFunction2();
-         console.log("trapo.length: " + trapo.length);
-         console.log("dicolini: " + dicolini);
-         console.log("HURRA!" );
-        
-         var audio = document.getElementById("myAudioTrap");
-         audio.play();
-         trapo = [];
-     } 
-}
-
-/* function clickolini() {
-    console.log(circleX);
-    console.log(circleY);
-      console.log(trap);
-    if (circleX === 975 && trap.length - 1 === trap) {
-        draw();
-        setTimeout(()=> {document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
-        alert("It's a trap! Move back one square")
-        },200);
-    } 
-    
-    if (circleX >= 76) {
-        circleX = circleX - 150;
-        draw();
-        var audio = document.getElementById("myAudio");
-        audio.play();
-        }
-    else if (circleX === 75) {
-        //console.log(circleX);
-        circleX = 1125;
-        circleY = circleY - 150;
-        draw();
-        var audio = document.getElementById("myAudio");
-        audio.play();
-        }   
-}
+/*
+Character page
 */
 
-var trapo = [];
-console.log(trapo)
-var diceNumber = "";
+document.getElementById("john").addEventListener("click", john);
+document.getElementById("ned").addEventListener("click", ned);
+document.getElementById("danny").addEventListener("click", danny);
+var pushi = 1;
+var characters = [];
 
-var x  = 1125 - 300;
-var y = 725;
+var player1 = [];
+var player2 = [];
+console.log("player 1: " + player1);
+var playercount = [];
 
-var ilini = "";
-var dicolini = ""
 
 
-function dice() {
-    trapo = [];
-    var dico = Math.floor(Math.random() * 6) + 1;
-    document.getElementById("dice").innerHTML = "<p>You got: " + dico + "</p>";
+//sessionStorage.setItem("player1" ,player1[0])
+//sessionStorage.setItem("player2" ,player2[0])
+/*function clickOnPlayer() {
+    if () {
+        john();
+    }
+    else if () {
+             
+             }
+     
+}*/
 
-    for (var i = 0; i < dico; i++) {
-        ilini = i + 1;
-        diceNumber = i + 1;
-        
-        
-        dicolini = dico;
-        //console.log("dico: " + dico)
-        
-        if ((circleX >= 76) && (dico + 1 !== diceNumber)) {
-            setTimeout(() => {
-                clickolini();
-                //trapo[i] = trapo;
-                //trapo.push();
-        console.log("Trapo.length: " + trapo.length)
-                console.log("Trapo: " + trapo)
-                console.log("dicolini: " + dicolini)
-            }, i * 500)
-            
-        } else if (circleX === 75 && dico + 1 !== diceNumber) {
-            setTimeout(() => {
-                clickolini();
-                
-            }, i * 500)
-        }    
-        function clickolini() {
-            if (circleX >= 76) {
-                trapo.push(i);
-                circleX = circleX - 150;
-                draw();
-                // console.log("ilini: " + ilini);
-                //    console.log("dicolini: " + dicolini);
-                //  console.log("trapo: " + trapo);
-                var audio = document.getElementById("myAudio");
-                audio.play();        
-            }
-               else if (circleX === 75) {
-                   trapo.push(i);
-                circleY = circleY - 150;
-                circleX = 1125;
-                draw();
-                var audio = document.getElementById("myAudio");
-                audio.play()
-                console.log("KlikkY!");
-            }
-        }
+
+
+var jon = document.getElementById("john"); 
+var ned = document.getElementById("ned");
+var danny = document.getElementById("danny"); 
+
+function john() {
+    var name = "Jon Snow"
+    if (player1.length === 0 && player2.length === 0) {
+    if (jon.classList.contains("chosen") === true) {
+       
+       // jon.classList.remove("chosen");
+    } else {
+       // jon.classList.add("chosen"); 
+      //  jon.style.opacity = "0.5";
+    //    jon.style.boxShadow = "0px 0px black";
+        document.getElementById("player1").innerHTML = "<p>Player 1 has chosen " + name + "</p><p>Do you want to play as " + name + "?</p><button onclick='johnYes()'>Yes!</button><button onclick='johnNo()'>No...</button>"
+    }
+    } else if (player1.length === 1 && player2.length === 0) {
+        if (jon.classList.contains("chosen") === true) {
+       
+        jon.classList.remove("chosen");
+    } else {
+        jon.classList.add("chosen"); 
+     //   jon.style.opacity = "0.5";
+     //   jon.style.boxShadow = "0px 0px black";
+        document.getElementById("player2").innerHTML = "<p>Player 2 has chosen " + name + "</p><p>Do you want to play as " + name + "?</p><button onclick='johnYes()'>Yes!</button><button onclick='johnNo()'>No...</button>"
+    }
+} else if (player1.length === 1 && player2.length === 1 ) {
+        alert("Sorry, this game is for 2 players only!");
     }
 }
-     function nyFunction() {
-            console.log("jaha: " + trapo.length);
-            console.log("jaha2: " + diceNumber);
-            console.log("NYFUNCTION!")
-            setTimeout(() => {
-                document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
-                alert("It's a trap! Move back one square");
-                circleX = circleX + 150;
-                trapo = [];
-                draw();
-            }, 100);
-        }
- function nyFunction2() {
-            console.log("jaha: " + trapo.length);
-            console.log("jaha2: " + diceNumber);
-            console.log("NYFUNCTION!")
-            setTimeout(() => {
-                document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
-                alert("It's a trap! Move back three squares");
-                circleX = circleX + 450;
-                trapo = [];
-                draw();
-            }, 100);
-        }
+
+function ned() {
+    var name = "Ned Stark"
+    if (player1.length === 0 && player2.length === 0) {
+    
+    if (ned.classList.contains("chosen") === true) {
+       
+        //ned.classList.remove("chosen");
+    } else {
+        //ned.classList.add("chosen"); 
+     //   ned.style.opacity = "0.5";
+    //    ned.style.boxShadow = "0px 0px black";
+        document.getElementById("player1").innerHTML = "<p>Player 1 has chosen " + name + "</p><p>Do you want to play as " + name + "?</p><button onclick='nedYes()'>Yes!</button><button onclick='nedNo()'>No...</button>"
+    } 
+    } else if (player1.length === 1 && player2.length === 0) {
+        if (ned.classList.contains("chosen") === true) {
+       
+        ned.classList.remove("chosen");
+    } else {
+        ned.classList.add("chosen"); 
+     //   ned.style.opacity = "0.5";
+     //   ned.style.boxShadow = "0px 0px black";
+        document.getElementById("player2").innerHTML = "<p>Player 2 has chosen " + name + "</p><p>Do you want to play as " + name + "?</p><button onclick='nedYes()'>Yes!</button><button onclick='nedNo()'>No...</button>"
+    }
+    } else if (player1.length === 1 && player2.length === 1 ) {
+        alert("Sorry, this game is for 2 players only!");
+    }
+}
+
+function danny() {
+     var name = "Daenerys Targaryan"
+     if (player1.length === 0 && player2.length === 0) {
+    if (danny.classList.contains("chosen") === true) {
+       
+       // danny.classList.remove("chosen");
+    } else {
+      //  danny.classList.add("chosen"); 
+    //    danny.style.opacity = "0.5";
+    //    danny.style.boxShadow = "0px 0px black";
+        document.getElementById("player1").innerHTML = "<p>Player 1 has chosen " + name + "</p><p>Do you want to play as " + name + "?</p><button onclick='dannyYes()'>Yes!</button><button onclick='dannyNo()'>No...</button>"
+    }
+     } else if (player1.length === 1 && player2.length === 0) {
+         if (danny.classList.contains("chosen") === true) {
+       
+        danny.classList.remove("chosen");
+    } else {
+        danny.classList.add("chosen"); 
+       // danny.style.opacity = "0.5";
+      //  danny.style.boxShadow = "0px 0px black";
+        document.getElementById("player2").innerHTML = "<p>Player 2 has chosen " + name + "</p><p>Do you want to play as " + name + "?</p><button onclick='dannyYes()'>Yes!</button><button onclick='dannyNo()'>No...</button>"
+    }
+     } else if (player1.length === 1 && player2.length === 1 ) {
+        alert("Sorry, this game is for 2 players only!");
+    }
+}
+
+function johnNo() {
+     jon.style.opacity = "1";
+        jon.style.boxShadow = "5px 5px black" 
+   // jon.classList.add("chosen");
+    document.getElementById("player1").innerHTML = "";
+    //john();
+}
+function johnYes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("John Snow")
+        document.getElementById("john").remove();
+        document.getElementById("player1").innerHTML = "Player 1 has chosen " + player1[0] + "!"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("John Snow");
+        document.getElementById("john").remove();
+        document.getElementById("player2").innerHTML = "Player 2 has chosen" + player2[0] + "!"
+        document.getElementById("whichPlayer").innerHTML = ""
+        play();
+    }
+}
+
+function nedNo() {
+    ned.style.opacity = "1";
+    ned.style.boxShadow = "5px 5px black" 
+   // ned.classList.add("chosen");
+    document.getElementById("player1").innerHTML = "";
+    //john();
+}
+function nedYes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Ned Stark")
+        document.getElementById("ned").remove();
+        document.getElementById("player1").innerHTML = "Player 1 has chosen " + player1 + "!"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Ned Stark");
+        document.getElementById("ned").remove();
+        document.getElementById("player2").innerHTML = "Player 2 has chosen " + player2 + "!"
+        document.getElementById("whichPlayer").innerHTML = ""
+        play();
+    }
+}
+
+function dannyNo() {
+    danny.style.opacity = "1";
+    danny.style.boxShadow = "5px 5px black" 
+   // danny.classList.add("chosen");
+    document.getElementById("player1").innerHTML = "";
+    //john();
+}
+function dannyYes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Daenerys Targaryan")
+        document.getElementById("danny").remove();
+        document.getElementById("player1").innerHTML = "Player 1 has chosen" + player1[0] + "!"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Daenerys Targaryan");
+        document.getElementById("danny").remove();
+        document.getElementById("player2").innerHTML = "Player 2 has chosen " + player2[0] + "!"
+        document.getElementById("whichPlayer").innerHTML = ""
+        play();
+    }
+}
+
+function play() {
+    if (player1.length === 1 && player2.length === 1) {
+    document.getElementById("play").innerHTML = "<button onclick='save()'><a href='game.html'>Lets play!</a></button>"
+        console.log(player1[0]);
+        console.log(player2[0]);
+        
+    }
+};
+
+function save() {
+    sessionStorage.setItem("playerUno", player1);
+    sessionStorage.setItem("playerDos", player2)
+}
+
+function see() {
+    console.log("Player1: " + player1.length);
+    console.log("Player2: " + player2.length);
+}
+
+/*
+function john() {
+    var name = "John";
+    if (jon.classList.contains("chosen") === true) {
+        jon.classList.remove("chosen")
+        nedNo();
+        johnNo();
+        dannyNo();
+        //remove
+        //characters.shift();
+        //player1.shift();
+        //console.log(characters);
+        
+    } else {
+       jon.classList.add("chosen")   
+       jon.style.opacity = "0.5";
+       jon.style.boxShadow = "0px 0px black";
+       //characters.push(pushi);
+       //console.log(characters);
+       //console.log("Player 1: " + player1[0])
+       //check(); 
+       
+        document.getElementById("first").innerHTML = "<p>Do player 1 want to play as " + name +  "?</p>" + "<button onclick='jonhYes()'>Yes</button>" + "<button onclick='johnNo()'>No</button>";
+}
+   
+    }
+function ned() {
+    var name = "Ned Stark";
+    if (ned.classList.contains("chosen") === true) {
+        ned.classList.remove("chosen");
+        nedNo();
+        johnNo();
+        dannyNo();
+        //characters.shift();
+        
+       // console.log(characters);
+       
+    } else {
+       ned.classList.add("chosen")   
+       ned.style.opacity = "0.5";
+       ned.style.boxShadow = "0px 0px black";
+       //characters.push(pushi);
+       //player1.push("Ned")
+       //console.log(player1)
+       //console.log(characters);
+       //check()
+       
+        document.getElementById("first").innerHTML = "<p>You want to play as " + name + "?</p>" + "<button onclick='nedYes()'>Yes</button>" + "<button onclick='nedNo()'>No</button>";
+}
+    }
+function danny() {
+   var name = "Daenerys Targaryan";
+    if (danny.classList.contains("chosen") === true) {
+        danny.classList.remove("chosen")
+  nedNo();
+        johnNo();
+        dannyNo();
+   } else {
+    danny.classList.add("chosen")   
+    danny.style.opacity = "0.5";
+    danny.style.boxShadow = "0px 0px black";
+       //characters.push(pushi);
+       //player1.push("Danny")
+       //console.log(characters);
+      // check()
+       john()
+        ned()
+        document.getElementById("first").innerHTML = "<p>You want to play as " + name + "?</p>" + "<button onclick='dannyYes()'>Yes</button>" + "<button onclick='dannyNo()'>No</button>";
+}
+    }
+//console.log("length: " + player1)
+
  
+function jonhYes() {
+    if (player1.length === 0) {
+        player1.push("John Snow")
+        playercount.push(1);
+        document.getElementById("player1").innerHTML = "Player one has chosen John Snow"
+        document.getElementById("first").innerHTML = "Player two choose second!"
+        jon.remove();
+        document.getElementById("player1").innerHTML = "<p>Player One has chosen John Snow!"
+    }
+     else if (player1.length === 1) {
+         player2.push("John Snow")
+         playercount.push(1);
+         document.getElementById("player2").innerHTML = "Player two has chosen John Snow"
+         document.getElementById("first").innerHTML = ""
+     }
+}
+function johnNo() {
+     document.getElementById("first").innerHTML = ""; 
+    jon.style.opacity = "1";
+        jon.style.boxShadow = "5px 5px black" 
+        jon.classList.remove("chosen");
+    document.getElementById("first").innerHTML = ""
+        //john();
+    }
+function nedYes() {
+    if (player1.length === 0) {
+       player1.push("Ned Stark")
+       playercount.push(1);
+       document.getElementById("player1").innerHTML = "Player one has chosen Ned Stark"
+        document.getElementById("first").innerHTML = "Player two choose second!"
+        ned.remove();
+        document.getElementById("player1").innerHTML = "<p>Player One has chosen Ned Stark!"    
+    } else if (player1.length === 1) {
+         player2.push("Ned Stark")
+       playercount.push(1);
+       document.getElementById("player2").innerHTML = "Player two has chosen Ned Stark"
+        document.getElementById("first").innerHTML = ""
+    }
+    }
+ function nedNo() {
+     document.getElementById("first").innerHTML = ""; 
+     ned.style.opacity = "1";
+        ned.style.boxShadow = "5px 5px black" 
+        ned.classList.remove("chosen");
+       document.getElementById("first").innerHTML = ""
+     
+        //ned();
+    }
+ 
+function dannyYes() {
+    if (player1.length === 0) {
+       player1.push("Danerys Targaryan")
+       playercount.push(1);
+       document.getElementById("player1").innerHTML = "Player one has chosen Danerys Targaryan"
+        danny.remove();
+        document.getElementById("first").innerHTML = "Player two choose second!"
+       
+    } else if (player1.length === 1) {
+         player2.push("Daenerys Targaryan")
+       playercount.push(1);
+       document.getElementById("player2").innerHTML = "Player two has chosen Daenerys Targaryan"
+        document.getElementById("first").innerHTML = ""
+        
+    }
+    }
+function dannyNo() {
+     document.getElementById("first").innerHTML = "";  
+      danny.style.opacity = "1";
+    danny.style.boxShadow = "5px 5px black" 
+    danny.classList.remove("chosen");
+       // characters.shift();
+        console.log(characters);
+        document.getElementById("first").innerHTML = ""
+    }
+
+
+
+function check() {
+if (playercount.length >= 3) {
+    characters = [];
+    alert("Maximum 2 players!");
+    danny();
+    ned();
+    john();
+    
+}
+}
+
+*/
+
+
