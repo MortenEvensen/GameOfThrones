@@ -1,6 +1,314 @@
+fetch("https://raw.githubusercontent.com/jeffreylancaster/game-of-thrones/master/data/characters.json")
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    images(json);
+   
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+
+function images(details) {
+    let image1 = document.getElementById("image1");
+    image1.innerHTML += "<img class='image' src='" + details.characters[123].characterImageFull + "'>" 
+    let image2 = document.getElementById("image2");
+    image2.innerHTML += "<img class='image' src='" + details.characters[133].characterImageFull + "'>" 
+    let image3 = document.getElementById("image3");
+    image3.innerHTML += "<img class='image' src='" + details.characters[59].characterImageFull + "'>" 
+    let image4 = document.getElementById("image4");
+    image4.innerHTML += "<img class='image' src='" + details.characters[349].characterImageFull + "'>" 
+    console.log(details.characters[123].characterImageFull)
+    let image5 = document.getElementById("image5");
+    image5.innerHTML += "<img class='image' src='" + details.characters[15].characterImageFull + "'>" 
+    console.log(details.characters[123].characterImageFull)
+    let image6 = document.getElementById("image6");
+    image6.innerHTML += "<img class='image' src='" + details.characters[257].characterImageFull + "'>" 
+    let image7 = document.getElementById("image7");
+    image7.innerHTML += "<img class='image' src='" + details.characters[287].characterImageFull + "'>" 
+    let image8 = document.getElementById("image8");
+    image8.innerHTML += "<img class='image' src='" + details.characters[345].characterImageFull + "'>" 
+    let image9 = document.getElementById("image9");
+    image9.innerHTML += "<img class='image' src='" + details.characters[113].characterImageFull + "'>" 
+    let image10 = document.getElementById("image10");
+    image10.innerHTML += "<img class='image' src='" + details.characters[38].characterImageFull + "'>" 
+}
+
+
+const baseUrl = "https://anapioficeandfire.com/api/characters/";
+let id = [583,1346,339,1052,148,823,901,2024,529,238]
+
+
+var characterUrl1 = `${baseUrl}${id[0]}`;
+var characterUrl2 = `${baseUrl}${id[1]}`;
+var characterUrl3 = `${baseUrl}${id[2]}`;
+var characterUrl4 = `${baseUrl}${id[3]}`;
+var characterUrl5 = `${baseUrl}${id[4]}`;
+var characterUrl6 = `${baseUrl}${id[5]}`;
+var characterUrl7 = `${baseUrl}${id[6]}`;
+var characterUrl8 = `${baseUrl}${id[7]}`;
+var characterUrl9 = `${baseUrl}${id[8]}`;
+var characterUrl10 = `${baseUrl}${id[9]}`;   
+
 /*
 Character page
 */
+
+fetch(characterUrl1)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar1(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+fetch(characterUrl2)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar2(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+fetch(characterUrl3)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar3(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+fetch(characterUrl4)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar4(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+fetch(characterUrl5)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar5(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+fetch(characterUrl6)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar6(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+fetch(characterUrl7)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar7(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+fetch(characterUrl8)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar8(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+fetch(characterUrl9)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar9(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+fetch(characterUrl10)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    createChar10(json);
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+
+function createChar1(details) {    
+    let char1 = document.getElementById("char1");
+    let titles1 = document.getElementById("titles1");
+    let aliases1 = document.getElementById("aliases1");
+    char1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    }   
+ }
+function createChar2(details) {
+    let char2 = document.getElementById("char2");
+    let titles1 = document.getElementById("titles2");
+    let aliases1 = document.getElementById("aliases2");
+    char2.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    }   
+}
+function createChar3(details) {
+    let char3 = document.getElementById("char3");
+    let titles1 = document.getElementById("titles3");
+    let aliases1 = document.getElementById("aliases3");
+    char3.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    }   
+}
+function createChar4(details) {
+    let char4 = document.getElementById("char4");
+    let titles1 = document.getElementById("titles4");
+    let aliases1 = document.getElementById("aliases4");
+    char4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    } 
+}
+function createChar5(details) {
+     let char5 = document.getElementById("char5");
+    let titles1 = document.getElementById("titles5");
+    let aliases1 = document.getElementById("aliases5");
+    char5.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    }
+}
+function createChar6(details) {
+     let char6 = document.getElementById("char6");
+    let titles1 = document.getElementById("titles6");
+    let aliases1 = document.getElementById("aliases6");
+    char6.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    }
+}
+function createChar7(details) {
+  let char7 = document.getElementById("char7");
+    let titles1 = document.getElementById("titles7");
+    let aliases1 = document.getElementById("aliases7");
+    char7.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    }
+}
+function createChar8(details) {
+   let char8 = document.getElementById("char8");
+    let titles1 = document.getElementById("titles8");
+    let aliases1 = document.getElementById("aliases8");
+    char8.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    }
+}
+function createChar9(details) {
+    let char9 = document.getElementById("char9");
+    let titles1 = document.getElementById("titles9");
+    let aliases1 = document.getElementById("aliases9");
+    char9.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    }
+}
+function createChar10(details) {
+     let char20 = document.getElementById("char20");
+    let titles1 = document.getElementById("titles10");
+    let aliases1 = document.getElementById("aliases10");
+    char10.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    for (var i = 0; i< details.titles.length; i++) {
+        var titles = "<li>" + details.titles[i] + "</li>"
+        titles1.innerHTML += titles;
+    }
+    for (var i = 0; i< details.aliases.length; i++) {
+        var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases;
+    }
+}
+
+document.getElementById("charOption1").addEventListener("click", option1);
+/*document.getElementById("charOption2").addEventListener("click", option2);
+document.getElementById("charOption3").addEventListener("click", option3);
+document.getElementById("charOption4").addEventListener("click", option4);
+document.getElementById("charOption5").addEventListener("click", option5);
+document.getElementById("charOption6").addEventListener("click", option6);
+document.getElementById("charOption7").addEventListener("click", option7);
+document.getElementById("charOption8").addEventListener("click", option8);
+document.getElementById("charOption9").addEventListener("click", option9);
+document.getElementById("charOption10").addEventListener("click", option10);*/
+
+
 
 document.getElementById("john").addEventListener("click", john);
 document.getElementById("ned").addEventListener("click", ned);
@@ -10,29 +318,45 @@ var characters = [];
 
 var player1 = [];
 var player2 = [];
-console.log("player 1: " + player1);
 var playercount = [];
-
-
-
-//sessionStorage.setItem("player1" ,player1[0])
-//sessionStorage.setItem("player2" ,player2[0])
-/*function clickOnPlayer() {
-    if () {
-        john();
-    }
-    else if () {
-             
-             }
-     
-}*/
-
-
+console.log("Player 1: " + player1)
 
 var jon = document.getElementById("john"); 
 var ned = document.getElementById("ned");
 var danny = document.getElementById("danny"); 
 
+function option1() {
+    if (player1.length === 0 && player2.length === 0) {
+    document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen John Snow</p><p>Do you want to play as John Snow?</p><button onclick='option1Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>";
+    //charOption1.classList.add("chosen"); 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card1'><p>Player 2 has chosen John Snow</p><p>Do you want to play as John Snow?</p><button onclick='option1Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+
+function option1Yes() {
+    
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("John Snow")
+        console.log("player1: " + player1[0])
+        document.getElementById("charOption1").remove();
+        document.getElementById("player1").innerHTML = "Player 1 has chosen " + player1[0] + "!"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("John Snow");
+        document.getElementById("charOption1").remove();
+        document.getElementById("player2").innerHTML = "Player 2 has chosen" + player2[0] + "!"
+        document.getElementById("whichPlayer").innerHTML = ""
+        play();
+    }
+}
+
+function option1No() {
+    console.log("no");
+    document.getElementById("player1").innerHTML = "";
+}
+
+/*
 function john() {
     var name = "Jon Snow"
     if (player1.length === 0 && player2.length === 0) {
@@ -200,7 +524,7 @@ function see() {
     console.log("Player2: " + player2.length);
 }
 
-/*
+
 function john() {
     var name = "John";
     if (jon.classList.contains("chosen") === true) {
@@ -362,5 +686,3 @@ if (playercount.length >= 3) {
 }
 
 */
-
-
