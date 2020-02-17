@@ -424,7 +424,7 @@ function option1Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[0] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'><h1>Player one: " + player1[0] + "</h1>" + "<p>VS</p> <h1>Player two: " + player2[0] + "</h1></div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option2Yes() {
@@ -439,7 +439,7 @@ function option2Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[1] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option3Yes() {
@@ -454,7 +454,7 @@ function option3Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[2] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option4Yes() {
@@ -469,7 +469,7 @@ function option4Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[3] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option5Yes() {
@@ -484,7 +484,7 @@ function option5Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[4] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option6Yes() {
@@ -499,7 +499,7 @@ function option6Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[5] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option7Yes() {
@@ -514,7 +514,7 @@ function option7Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[6] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option8Yes() {
@@ -529,7 +529,7 @@ function option8Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[7] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option9Yes() {
@@ -544,7 +544,7 @@ function option9Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[8] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option10Yes() {
@@ -559,7 +559,7 @@ function option10Yes() {
         document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[9] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
         document.getElementById("rules").innerHTML = "";
-        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><a href='game.html'><div id='divplay' class='divplay'><h1 class='play'>Lets Play!</h1></div></a>";
     }
 }
 function option1No() {
@@ -570,7 +570,9 @@ function option1No() {
     }
 }
 
-
+document.getElementById("divplay").addEventListener("click", function() {
+    
+})
 
 /*
 function john() {
