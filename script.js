@@ -4,37 +4,52 @@ fetch("https://raw.githubusercontent.com/jeffreylancaster/game-of-thrones/master
   })
   .then((json) => {
     images(json);
-   
+    
   })
     .catch(function(error) {
     console.log("Error");
 })
 
+var storeImages = [];
+
 function images(details) {
+    
     let image1 = document.getElementById("image1");
-    image1.innerHTML += "<img class='image' src='" + details.characters[123].characterImageFull + "'>" 
+    image1.innerHTML += "<img class='image' src='" + details.characters[123].characterImageFull + "'>";
+    storeImages.push(details.characters[123].characterImageFull);
     let image2 = document.getElementById("image2");
-    image2.innerHTML += "<img class='image' src='" + details.characters[133].characterImageFull + "'>" 
+    image2.innerHTML += "<img class='image' src='" + details.characters[133].characterImageFull + "'>"
+    storeImages.push(details.characters[133].characterImageFull);
     let image3 = document.getElementById("image3");
     image3.innerHTML += "<img class='image' src='" + details.characters[59].characterImageFull + "'>" 
+   storeImages.push(details.characters[59].characterImageFull);
     let image4 = document.getElementById("image4");
     image4.innerHTML += "<img class='image' src='" + details.characters[349].characterImageFull + "'>" 
-    console.log(details.characters[123].characterImageFull)
+    storeImages.push(details.characters[349].characterImageFull);
     let image5 = document.getElementById("image5");
     image5.innerHTML += "<img class='image' src='" + details.characters[15].characterImageFull + "'>" 
-    console.log(details.characters[123].characterImageFull)
+    storeImages.push(details.characters[15].characterImageFull);
     let image6 = document.getElementById("image6");
-    image6.innerHTML += "<img class='image' src='" + details.characters[257].characterImageFull + "'>" 
+    image6.innerHTML += "<img class='image' src='" + details.characters[257].characterImageFull + "'>"
+    storeImages.push(details.characters[257].characterImageFull);
     let image7 = document.getElementById("image7");
     image7.innerHTML += "<img class='image' src='" + details.characters[287].characterImageFull + "'>" 
+    storeImages.push(details.characters[287].characterImageFull);
     let image8 = document.getElementById("image8");
     image8.innerHTML += "<img class='image' src='" + details.characters[345].characterImageFull + "'>" 
+    storeImages.push(details.characters[345].characterImageFull);
     let image9 = document.getElementById("image9");
     image9.innerHTML += "<img class='image' src='" + details.characters[113].characterImageFull + "'>" 
+    storeImages.push(details.characters[113].characterImageFull);
     let image10 = document.getElementById("image10");
     image10.innerHTML += "<img class='image' src='" + details.characters[38].characterImageFull + "'>" 
+    storeImages.push(details.characters[38].characterImageFull);
+    console.log("images1: " + storeImages[1])
 }
 
+
+
+console.log("images: " + storeImages.length)
 
 const baseUrl = "https://anapioficeandfire.com/api/characters/";
 let id = [583,1346,339,1052,148,823,901,2024,529,238]
@@ -298,7 +313,7 @@ function createChar10(details) {
 }
 
 document.getElementById("charOption1").addEventListener("click", option1);
-/*document.getElementById("charOption2").addEventListener("click", option2);
+document.getElementById("charOption2").addEventListener("click", option2);
 document.getElementById("charOption3").addEventListener("click", option3);
 document.getElementById("charOption4").addEventListener("click", option4);
 document.getElementById("charOption5").addEventListener("click", option5);
@@ -306,7 +321,7 @@ document.getElementById("charOption6").addEventListener("click", option6);
 document.getElementById("charOption7").addEventListener("click", option7);
 document.getElementById("charOption8").addEventListener("click", option8);
 document.getElementById("charOption9").addEventListener("click", option9);
-document.getElementById("charOption10").addEventListener("click", option10);*/
+document.getElementById("charOption10").addEventListener("click", option10);
 
 
 
@@ -327,34 +342,235 @@ var danny = document.getElementById("danny");
 
 function option1() {
     if (player1.length === 0 && player2.length === 0) {
-    document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen John Snow</p><p>Do you want to play as John Snow?</p><button onclick='option1Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>";
-    //charOption1.classList.add("chosen"); 
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen John Snow</p><p>Do you want to play as John Snow?</p><button onclick='option1Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
     } else if (player1.length === 1 && player2.length === 0) {
-        document.getElementById("player2").innerHTML = "<div id='card1'><p>Player 2 has chosen John Snow</p><p>Do you want to play as John Snow?</p><button onclick='option1Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen John Snow</p><p>Do you want to play as John Snow?</p><button onclick='option1Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+function option2() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen Khal Drogo</p><p>Do you want to play as Khal Drogo?</p><button onclick='option2Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen Khal Drogo</p><p>Do you want to play as Khal Drogo?</p><button onclick='option2Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+function option3() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen Ned Stark</p><p>Do you want to play as Ned Stark?</p><button onclick='option3Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen Ned Stark</p><p>Do you want to play as Ned Stark?</p><button onclick='option3Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+function option4() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen Ned Tyrion Lanister</p><p>Do you want to play as Tyrion Lanister?</p><button onclick='option4Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen Tyrion Lanister</p><p>Do you want to play as Tyrion Lanister?</p><button onclick='option4Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+function option5() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen Arya Stark</p><p>Do you want to play as Arya Stark?</p><button onclick='option5Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen Arya Stark</p><p>Do you want to play as Arya Stark?</p><button onclick='option5Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+function option6() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen Petyr Baelish</p><p>Do you want to play as Petyr Baelish?</p><button onclick='option6Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen Petyr Baelish</p><p>Do you want to play as Petyr Baelish?</p><button onclick='option6Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+function option7() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen Robert Baratheon</p><p>Do you want to play as Robert Baratheon?</p><button onclick='option7Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen Robert I Baratheon</p><p>Do you want to play as Robert I Baratheon?</p><button onclick='option7Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+function option8() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen Tormund Giantsbane</p><p>Do you want to play as Tormund Giantsbane?</p><button onclick='option8Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen Tormund Giantsbane</p><p>Do you want to play as Tormund Giantsbane?</p><button onclick='option8Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+function option9() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen Jaime Lannister</p><p>Do you want to play as Jaime Lannister?</p><button onclick='option9Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen Jaime Lannister</p><p>Do you want to play as Jaime Lannister?</p><button onclick='option9Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+    }
+}
+
+function option10() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "<div id='card1'><p>Player 1 has chosen Cersei Lannister</p><p>Do you want to play as Cersei Lannister?</p><button onclick='option10Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "<div id='card2'><p>Player 2 has chosen Cersei Lannister</p><p>Do you want to play as Cersei Lannister?</p><button onclick='option10Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
     }
 }
 
 function option1Yes() {
-    
     if (player1.length === 0 && player2.length === 0) {
         player1.push("John Snow")
-        console.log("player1: " + player1[0])
         document.getElementById("charOption1").remove();
-        document.getElementById("player1").innerHTML = "Player 1 has chosen " + player1[0] + "!"
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[0] + "'>"
         document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
     } else if (player1.length === 1 && player2.length === 0) {
         player2.push("John Snow");
         document.getElementById("charOption1").remove();
-        document.getElementById("player2").innerHTML = "Player 2 has chosen" + player2[0] + "!"
-        document.getElementById("whichPlayer").innerHTML = ""
-        play();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[0] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'><h1>Player one: " + player1[0] + "</h1>" + "<p>VS</p> <h1>Player two: " + player2[0] + "</h1></div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option2Yes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Khal Drogo")
+        document.getElementById("charOption2").remove();
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[1] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Khal Drogo");
+        document.getElementById("charOption2").remove();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[1] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option3Yes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Ned Stark")
+        document.getElementById("charOption3").remove();
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[2] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Ned Stark");
+        document.getElementById("charOption3").remove();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[2] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option4Yes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Tyrion Lannister")
+        document.getElementById("charOption4").remove();
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[3] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Tyrion Lannister");
+        document.getElementById("charOption4").remove();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[3] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option5Yes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Arya Stark")
+        document.getElementById("charOption5").remove();
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[4] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Arya Stark");
+        document.getElementById("charOption5").remove();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[4] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option6Yes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Petyr Baelish")
+        document.getElementById("charOption6").remove();
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[5] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Petyr Baelish");
+        document.getElementById("charOption2").remove();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[5] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option7Yes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Robert Baratheon")
+        document.getElementById("charOption7").remove();
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[6] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Robert Baratheon");
+        document.getElementById("charOption7").remove();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[6] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option8Yes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Tormund Giantsbane")
+        document.getElementById("charOption8").remove();
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[7] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Tormund Giantsbane");
+        document.getElementById("charOption8").remove();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[7] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option9Yes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Jamie Lannister")
+        document.getElementById("charOption9").remove();
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[8] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Jamie Lannister");
+        document.getElementById("charOption9").remove();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[8] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option10Yes() {
+    if (player1.length === 0 && player2.length === 0) {
+        player1.push("Cersei Lannister")
+        document.getElementById("charOption10").remove();
+        document.getElementById("card1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[9] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
+    } else if (player1.length === 1 && player2.length === 0) {
+        player2.push("Cersei Lannister");
+        document.getElementById("charOption8").remove();
+        document.getElementById("card2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[9] + "'>"
+        document.getElementById("whichPlayer").innerHTML = "";
+        document.getElementById("rules").innerHTML = "";
+        document.getElementById("content-wrap").innerHTML = "<div class='vs'>Player one: " + player1[0] + " VS Player two: " + player2[0] + "</div><div class='divplay'><h1 class='play'>Lets Play!</h1></div>";
+    }
+}
+function option1No() {
+    if (player1.length === 0 && player2.length === 0) {
+        document.getElementById("player1").innerHTML = "";
+    } else if (player1.length === 1 && player2.length === 0) {
+        document.getElementById("player2").innerHTML = "";     
     }
 }
 
-function option1No() {
-    console.log("no");
-    document.getElementById("player1").innerHTML = "";
-}
+
 
 /*
 function john() {

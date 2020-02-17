@@ -65,6 +65,28 @@ h1 {
     color: black;
 }
 
+#rules {
+    display: flex;
+     text-align: center;
+    font-size: 40px;
+}
+
+.rules1, .rules2, .rules3 {
+    flex: 1;  
+    padding: 20px;
+}
+.rules1 {
+    text-align: left;
+}
+.rules2 {
+    text-align: center;
+}
+.rules3 {
+    text-align: right;
+}
+#whichPlayer {
+    text-align: center;
+}
 /* Characters
 ---------------*/
 .character-wrap {
@@ -133,12 +155,50 @@ p, li {
 .player1, .player2 {
     flex: 1;
 }
-
-#card1 {
-    background-color: white;
+/*
+   Player 1 and 2
+------------------*/
+#card1, #card2 {
+    background-color: grey;
     color: black;
     border: 2px solid grey;
-    min-height: 150px;
+    min-height: 50px;
+    padding: 5px;
+    text-align: center;
+}
+.imagePlayer {
+    width: 150px;
+    padding: 20px;
+}
+.divplay {
+    margin: 0 30%;
+    text-align: center;
+}
+
+.play {
+    padding: 40px 20px;
+    text-align: center;
+    color: black;
+    background-color: white;
+    font-size: 50px;
+    border: 5px solid grey;
+    border-radius: 40%;
+    
+}
+.divplay:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+.divplay:active {
+    opacity: 0.3;
+}
+
+.vs {
+    text-align: center;
+    margin: 50px;
+    font-size: 30px;
+    background-color: grey;
+    padding: 20px;
 }
 
 
