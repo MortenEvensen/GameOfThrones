@@ -19,28 +19,29 @@
             <h1>Game of Thrones * board game</h1>
         </div>
     </header>
-    <canvas class="canvas" id="myCanvas" width="1200" height="800">
-    
-    </canvas>
-    <button type="button" id="button" onclick="draw()">Button</button>
-    <button type="button" id="button2" onclick="clickolini()">Button2</button>
-    <button type="button" id="button2" onclick="hei()">Button3</button>
-    <div id="dice"></div>
-    <button type="button" id="button4" onclick="dice()">Terning</button>
-    <div id="message"></div>
-    <div id="counter"></div>
-    <div id="turn">
-    <p>It's player one's turn</p>
+<div class="game-wrap">
+    <div class="canvas-wrap">
+        <canvas class="canvas" id="myCanvas" width="1200" height="800">
+        </canvas>
     </div>
-    <div id="player1">
-    <p>Player One</p>
+    <div class="text-wrap">
+        <div id="dice"></div>
+        <button type="button" id="button4" onclick="dice()">Throw Dice</button>
+        <div id="message"></div>
+        <div id="counter"></div>
+        <div id="turn">
+            <p>It's player one's turn</p>
+        </div>
+        <div id="player1">
+            <p>Player One</p>
+        </div>
+        <div id="player2">
+            <p>Player Two</p>
+        </div>
+        <div id="six">
+        </div>
     </div>
-    <div id="player2">
-    <p>Player Two</p>
-    </div>
-    <div id="six">
-    
-    </div>
+</div>
     <script src="script.js"></script>
     <script src="game2.js"></script>
 </body>
