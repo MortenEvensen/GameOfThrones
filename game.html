@@ -4,6 +4,26 @@
     <link type="text/css" rel="stylesheet" href="styles.css">
 </head>
 <body class="body">
+    <div id="trap1modal-wrap" class="trapmodal">
+        <div id="trap1">
+        </div>
+    </div>
+    <div id="trap2modal-wrap" class="trapmodal">
+        <div id="trap2">
+        </div>
+    </div>
+    <div id="trap3modal-wrap" class="trapmodal">
+        <div id="trap3">            
+        </div>
+    </div>
+    <div id="trap4modal-wrap" class="trapmodal">  
+        <div id="trap4">
+        </div>
+    </div>
+    <div id="trap5modal-wrap" class="trapmodal">
+        <div id="trap5">
+        </div>
+    </div>
     <audio id="myAudio">
         <source src="move.mp3" type="audio/ogg">
         <source src="move.mp3" type="audio/mpeg">
@@ -21,8 +41,23 @@
     </header>
 <div class="game-wrap">
     <div class="canvas-wrap">
-        <canvas class="canvas" id="myCanvas" width="1200" height="800">
+        <canvas class="canvas" id="myCanvas" width="1200" height="900">
         </canvas>
+        <div style="display:none;">
+        <img id="starkSource" src="graphics/banners/Stark-banner.png" width="100" height="100">
+        </div>
+         <div style="display:none;">
+        <img id="lannisterSource" src="graphics/banners/Lannister.png" width="100" height="100">
+        </div>
+         <div style="display:none;">
+        <img id="valeSource" src="graphics/banners/Vale.png" width="100" height="100">
+        </div>
+        <div style="display:none;">
+        <img id="baratheonSource" src="graphics/banners/Baratheon.png" width="100" height="100">
+        </div>
+        <div style="display:none;">
+        <img id="targaryanSource" src="graphics/banners/Targaryan.png" width="100" height="100">
+        </div>
     </div>
     <div class="text-wrap">
         <div id="dice"></div>
