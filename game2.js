@@ -66,7 +66,6 @@ function draw() {
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("3", 1055 - 150 - 150, 775);
-    ctx.rect(800, 700, 50, 50)
     ctx.stroke();
 
     ctx.beginPath();
@@ -140,7 +139,6 @@ function draw() {
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("12", 1055 - 150 - 150 - 150, 775 - 150);
-    ctx.rect(650, 650, 50, 50)
     ctx.stroke();
 
     ctx.beginPath();
@@ -202,7 +200,6 @@ function draw() {
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("19", 1055 - 150 - 150, 775 - 300);
-    ctx.rect(800, 700, 50, 50)
     ctx.stroke();
 
     ctx.beginPath();
@@ -276,7 +273,6 @@ function draw() {
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("28", 1055 - 150 - 150 - 150, 775 - 450);
-    ctx.rect(650, 650, 50, 50)
     ctx.stroke();
 
     ctx.beginPath();
@@ -338,7 +334,6 @@ function draw() {
     ctx.font = "20px Verdana";
     ctx.strokeStyle = "#000000";
     ctx.strokeText("35", 1055 - 150 - 150, 775 - 600);
-    ctx.rect(800, 700, 50, 50)
     ctx.stroke();
 
     ctx.beginPath();
@@ -380,6 +375,52 @@ function draw() {
     ctx.strokeText("40", 1055 - 150 - 150 - 150 - 150 - 150 - 150 - 150, 775 - 600);
     ctx.stroke();
     
+     /* Players:
+    ------------------*/
+    
+    /* initial starting point
+    --------------*/
+    
+    var x1 = "";
+    var y1 = "";
+    
+    var x2 = "";
+    var y2 = "";
+    
+    ctx.beginPath();
+    ctx.moveTo(10,10);
+    ctx.lineTo(10,60);
+    ctx.lineTo(35,90);
+    ctx.lineTo(60,60);
+    ctx.lineTo(60,10);
+    ctx.lineTo(35,5);
+    ctx.lineTo(10,10);
+    //ctx.quadraticCurveTo(25, 25, 25, 62.5);
+    ctx.stroke();
+    /*
+    ctx.beginPath();
+    ctx.moveTo(1070,730);
+    ctx.lineTo(1070,800);
+    ctx.lineTo(1130,850);
+    ctx.lineTo(1190,800);
+    ctx.lineTo(1190,730);
+    ctx.lineTo(1130,720);
+    ctx.lineTo(1070,730);
+   
+    ctx.fillStyle = "red";
+    ctx.strokeStyle = "black";
+    ctx.stroke();
+    
+    //ctx.quadraticCurveTo(25, 25, 25, 62.5);
+    ctx.fill();
+    
+     ctx.beginPath();
+     ctx.font = "12px Verdana";
+    ctx.fillStyle = "#000000";
+    ctx.fillText("Player 1", 1105, 825)
+    ctx.fill();*/
+    
+    
     /* Graphics/traps
     ------------------*/
     
@@ -394,31 +435,96 @@ function draw() {
     var imageTargaryan = document.getElementById("targaryanSource");
     ctx.drawImage(imageTargaryan, 760, 165, 120, 120)
     
+    
+        var imageJohn = document.getElementById("johnSnow");
+    var imageCersei = document.getElementById("cersei");
+    var imageDaenerys = document.getElementById("daenerys");
+    var imageDrogo = document.getElementById("drogo");
+    var imageGeofrey = document.getElementById("geofrey");
+    var imageJamie = document.getElementById("jamie");
+    var imageBaelish = document.getElementById("baelish");
+    var imageRobert = document.getElementById("robert");
+    var imageSansa = document.getElementById("sansa");
+    var imageTyrion = document.getElementById("tyrion");
+    
+    
+          //Player 2 game piece
+    
+    ctx.beginPath();
+    ctx.fillStyle = "#cccccc";
+    ctx.strokeStyle = "#000000";
+    ctx.font = "10px Arial";
+    ctx.arc(circleX2, circleY2, 65, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.strokeText(secondPlayer2, circleX2 - 35, circleY2+45);
+    ctx.stroke();
+    
+    //y =780
+    
+    if (secondPlayer2 === "John Snow") {
+        ctx.drawImage(imageJohn, circleX2 - 35, circleY2 - 60,70,100)
+    } else if (secondPlayer2 === "Khal Drogo") {
+        ctx.drawImage(imageDrogo, circleX2 - 35, circleY2 - 60,70,100)
+    } else if (secondPlayer2 === "Sansa Stark") {
+        ctx.drawImage(imageSansa, circleX2 - 35, circleY2 - 60,70,100)
+    } else if (secondPlayer2 === "Tyrion Lannister") {
+        ctx.drawImage(imageTyrion, circleX2 - 35, circleY2 - 60,70,100)
+    } else if (secondPlayer2 === "King Joffrey") {
+        ctx.drawImage(imageGeofrey, circleX2 - 35, circleY2 - 60,70,100)
+    } else if (secondPlayer2 === "Petyr Baelish") {
+        ctx.drawImage(imageBaelish, circleX2 - 35, circleY2 - 60,70,100)
+    } else if (secondPlayer2 === "Robert Baratheon") {
+        ctx.drawImage(imageRobert, circleX2 - 35, circleY2 - 60,70,100)
+    } else if (secondPlayer2 === "Daenerys Targaryan") {
+        ctx.drawImage(imageRobert, circleX2 - 35, circleY2 - 60,70,100)
+    } else if (secondPlayer2 === "Jamie Lannister") {
+        ctx.drawImage(imageJamie, circleX2 - 35, circleY2 - 60,70,100)
+    } else if (secondPlayer2 === "Cersei Lannister") {
+        ctx.drawImage(imageCersei, circleX2 - 35, circleY2 - 60,70,100)
+    } 
+    
     /*
     Player 1 game piece
     */
     
-    ctx.beginPath();
-    ctx.fillStyle = "blue";
-    ctx.strokeStyle = "#000000";
+   ctx.beginPath();
+    ctx.fillStyle = "#cccccc";
+    ctx.strokeStyle = " #000000";
     ctx.font = "10px Arial";
-    ctx.arc(circleX1, circleY1, 40, 0, 2 * Math.PI);
+    ctx.arc(circleX1, circleY1, 65, 0, 2 * Math.PI);
+    ctx.stroke();
     ctx.fill();
     ctx.beginPath();
-    ctx.strokeText(firstPlayer1, circleX1 - 20,circleY1);
+    ctx.strokeText(firstPlayer1, circleX1 - 35,circleY1+45);
     ctx.stroke();
-    /*
-    Player 2 game piece
-    */
-    ctx.beginPath();
-    ctx.fillStyle = "red";
-    ctx.strokeStyle = "#000000";
-    ctx.font = "15px Arial";
-    ctx.arc(circleX2, circleY2, 40, 0, 2 * Math.PI);
-    ctx.fill();
-    ctx.beginPath();
-    ctx.strokeText(secondPlayer2, circleX2 - 20, circleY2);
-    ctx.stroke();
+    
+      /*ctx.drawImage(imageTyrion, circleX1 - 35, circleY1 - 60,70,100)*/
+    
+    if (firstPlayer1 === "John Snow") {
+        ctx.drawImage(imageJohn, circleX1 - 35, circleY1 - 60,70,100)
+    } else if (firstPlayer1 === "Khal Drogo") {
+        ctx.drawImage(imageDrogo, circleX1 - 35, circleY1 - 60,70,100)
+    } else if (firstPlayer1 === "Sansa Stark") {
+        ctx.drawImage(imageSansa, circleX1 - 35, circleY1 - 60,70,100)
+    } else if (firstPlayer1 === "Tyrion Lannister") {
+        ctx.drawImage(imageTyrion, circleX1 - 35, circleY1 - 60,70,100)
+    } else if (firstPlayer1 === "King Joffrey") {
+        ctx.drawImage(imageGeofrey, circleX1 - 35, circleY1 - 60,70,100)
+    } else if (firstPlayer1 === "Petyr Baelish") {
+        ctx.drawImage(imageBaelish, circleX1 - 35, circleY1 - 60,70,100)
+    } else if (firstPlayer1 === "Robert Baratheon") {
+        ctx.drawImage(imageRobert, circleX1 - 35, circleY1 - 60,70,100)
+    } else if (firstPlayer1 === "Daenerys Targaryan") {
+        ctx.drawImage(imageDaenerys, circleX1 - 35, circleY1 - 60,70,100)
+    } else if (firstPlayer1 === "Jamie Lannister") {
+        ctx.drawImage(imageJamie, circleX1 - 35, circleY1 - 60,70,100)
+    } else if (firstPlayer1 === "Cersei Lannister") {
+        ctx.drawImage(imageCersei, circleX1 - 35, circleY1 - 60,70,100)
+    } 
+    
+   
+    
     
     
     console.log("Dico: " + dico);
@@ -434,21 +540,40 @@ function draw() {
     ----------------------*/
     if ((circleX1 === 225) && (circleY1 === 830) && (trapo.length === dicolini) /*&& (trapo.length === 2||1)*/) {
         trap1();
-        var audio =     document.getElementById("myAudioTrap");
-        audio.play();
         //trapo = [];
     } else if ((circleX2 === 225) && (circleY2 === 830  ) && (trapo.length === dicolini) /*&& (trapo.length === 2||1)*/) {
         trap1();
     }
      /* Trap 2 - Lannister trap
     ----------------------*/
-    if ((circleX1 === 225 + 300) && (circleY1 === 830 - 150 ) && trapo.length === dicolini) {
+    if ((circleX1 === 525) && (circleY1 === 680 ) && trapo.length === dicolini) {
         trap2();   
-        var audio = document.getElementById("myAudioTrap");
-        audio.play();
         //trapo = [];
-    } else if((circleX2 === 225 + 300) && (circleY2 === 830 - 150) && trapo.length === dicolini) {
+    } else if((circleX2 === 525) && (circleY2 === 680) && trapo.length === dicolini) {
         trap2();
+    };
+     /* Trap 3 - The Vale trap
+    ----------------------*/
+    if ((circleX1 === 675) && (circleY1 === 530 ) && trapo.length === dicolini) {
+        trap3();   
+        //trapo = [];
+    } else if((circleX2 === 675) && (circleY2 === 530) && trapo.length === dicolini) {
+        trap3();
+    };
+      /* Trap 4 - Baratheon trap
+    ----------------------*/
+    if ((circleX1 === 975) && (circleY1 === 380 ) && trapo.length === dicolini) {
+        trap4();   
+    } else if((circleX2 === 975) && (circleY2 === 380) && trapo.length === dicolini) {
+        trap4();
+    };
+     /* Trap 5 - Targaryan trap
+    ----------------------*/
+    if ((circleX1 === 825) && (circleY1 === 230 ) && trapo.length === dicolini) {
+        trap5();   
+        //trapo = [];
+    } else if((circleX2 === 825) && (circleY2 === 230) && trapo.length === dicolini) {
+        trap5();
     };
     
 }
@@ -578,7 +703,7 @@ function dice() {
 function trap1() {
     /* Player 1 Stark trap as Stark player
     ----------------------*/
-    if ((player1game.length > player2game.length) && ((firstPlayer1 === "John Snow") || (firstPlayer1 === "Ned Stark") || (firstPlayer1 === "Arya Stark")) && ((circleX1 === 225) && (circleY1 === 830))) {
+    if ((player1game.length > player2game.length) && ((firstPlayer1 === "John Snow") || (firstPlayer1 === "Sansa Stark")) && ((circleX1 === 225) && (circleY1 === 830))) {
         setTimeout(() => { 
             console.log("trap opt1")
            document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>You encounter a camp filled with Stark soliders! Since you are " + firstPlayer1 + " you are most welcome! The soliders lends you a horse, and you move forward 4 spaces!</p><button onclick='closeModal()'>Great!</button>";
@@ -589,7 +714,7 @@ function trap1() {
         }, 100);  
          /* Player 1 Stark trap as non-Stark player
     ----------------------*/
-    } else if ((player1game.length > player2game.length) && ((firstPlayer1 != "John Snow") || (firstPlayer1 != "Ned Stark") || (firstPlayer1 != "Arya Stark")) && ((circleX1 === 225) && (circleY1 === 830))) {
+    } else if ((player1game.length > player2game.length) && ((firstPlayer1 != "John Snow") || (firstPlayer1 != "Sansa Stark")) && ((circleX1 === 225) && (circleY1 === 830))) {
         setTimeout(() => {
             console.log("trap opt2")
             document.getElementById("trap1modal-wrap").style.display = "block"; 
@@ -602,7 +727,7 @@ function trap1() {
     }
     /* Player 2 Stark trap as Stark player
     ----------------------*/
-    else if ((player1game.length === player2game.length) && ((secondPlayer2 === "John Snow") || (secondPlayer2 === "Ned Stark") || (secondPlayer2 === "Arya Stark")) && ((circleX2 === 225) && (circleY2 === 830 ))) {
+    else if ((player1game.length === player2game.length) && ((secondPlayer2 === "John Snow") || (secondPlayer2 === "Sansa Stark")) && ((circleX2 === 225) && (circleY2 === 830 ))) {
         setTimeout(() => {  
             console.log("trap opt3")
            document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>You encounter a camp filled with Stark soliders! Since you are " + secondPlayer2 + " you are most welcome! The soliders lends you a horse, and you move forward 4 spaces!</p><button onclick='closeModal()'>Great!</button>";
@@ -613,7 +738,7 @@ function trap1() {
         }, 100);  
     /* Player 2 trap as non-Stark player 
     ----------------------*/
-    } else if ((player1game.length === player2game.length) && ((secondPlayer2 != "John Snow") || (secondPlayer2 != "Ned Stark") || (secondPlayer2 != "Arya Stark")) && ((circleX2 === 225) && (circleY2 === 830))) {
+    } else if ((player1game.length === player2game.length) && ((secondPlayer2 != "John Snow") || (secondPlayer2 != "Sansa Stark")) && ((circleX2 === 225) && (circleY2 === 830))) {
         setTimeout(() => {
             console.log("trap opt4")
            document.getElementById("trap1modal-wrap").style.display = "block"; 
@@ -625,9 +750,198 @@ function trap1() {
         }, 100);
     }
 }
- function trap2() {
-     /* Player 1 trap 2
+
+function trap2() {
+    /* Player 1 Lannister trap as Lannister player
     ----------------------*/
+    if ((player1game.length > player2game.length) && ((firstPlayer1 === "Jamie Lannister") || (firstPlayer1 === "Cersei Lannister")) && ((circleX1 === 525) && (circleY1 === 680))) {
+        setTimeout(() => { 
+           document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>You encounter a small Lannister Army! Since you are " + firstPlayer1 + " the army welcomes you! They give you food and water, and you feel your energy is comming back! Therefore you mange to travel 3 more spaces</p><button onclick='closeModal()'>Go Lannisters!</button>";
+            circleX1 = circleX1 - 450;
+            
+            //trapo = [];
+            draw();
+        }, 100);  
+         /* Player 1 Lannister trap as non-Lannister player
+    ----------------------*/
+    } else if ((player1game.length > player2game.length) && ((firstPlayer1 != "Jamie Lannister") || (firstPlayer1 != "Cersei Lannister")) && ((circleX1 === 525) && (circleY1 === 680))) {
+        setTimeout(() => {
+            document.getElementById("trap1modal-wrap").style.display = "block"; 
+            document.getElementById("trap1").innerHTML = "<p>You encounter a small Lannister Army! Since you are " + firstPlayer1 + " you are not welcome here! The soliders prepare to attack you, and therefore you run back as fast as you can. Move back 3 spaces!</p><button onclick='closeModal()'>I hate the Lannisters...</button>";
+            
+            circleX1 = circleX1 + 450;
+            //trapo = [];
+            draw();
+        }, 100);
+    }
+    /* Player 2 Lannister trap as Lannister player
+    ----------------------*/
+    else if ((player1game.length === player2game.length) && ((secondPlayer2 === "Jamie Lannister") || (secondPlayer2 === "Cersei Lannister")) && ((circleX2 === 525) && (circleY2 === 680 ))) {
+        setTimeout(() => {  
+           document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>You encounter a small Lannister Army! Since you are " + secondPlayer2 + " the army welcomes you! They give you food and water, and you feel your energy is comming back! Therefore you mange to travel 3 more spaces</p><button onclick='closeModal()'>Go Lannisters!</button>";
+            circleX2 = circleX2 - 450;
+            //trapo = [];
+            draw();
+        }, 100);  
+    /* Player 2 trap as non-Lannister player 
+    ----------------------*/
+    } else if ((player1game.length === player2game.length) && ((secondPlayer2 != "Jamie Lannister") || (secondPlayer2 != "Cersei Lannister")) && ((circleX2 === 525) && (circleY2 === 680))) {
+        setTimeout(() => {
+           document.getElementById("trap1modal-wrap").style.display = "block"; 
+            document.getElementById("trap1").innerHTML = "<p>You encounter a small Lannister Army! Since you are " + secondPlayer2 + " you are not welcome here! The soliders prepare to attack you, and therefore you run back as fast as you can. Move back 3 spaces!</p><button onclick='closeModal()'>I hate the Lannisters...</button>";
+           
+            circleX2 = circleX2 + 450;
+            //trapo = [];
+            draw();
+        }, 100);
+    }
+}
+
+function trap3() {
+    /* Player 1 The Vale trap as The Vale player
+    ----------------------*/
+    if ((player1game.length > player2game.length) && (firstPlayer1 === "Petyr Baelish") && ((circleX1 === 675) && (circleY1 === 530 ))) {
+        setTimeout(() => { 
+           document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>A wild group og Vale Knigths appears! Since you are " + firstPlayer1 + " the Knights offers you a horse! You manage to move 3 more spaces forwards!</p><button onclick='closeModal()'>Chaos is a ladder!</button>";
+            circleX1 = circleX1 - 450;
+            
+            //trapo = [];
+            draw();
+        }, 100);  
+         /* Player 1 The Vale trap as non-The Vale
+    ----------------------*/
+    } else if ((player1game.length > player2game.length) && (firstPlayer1 != "Petyr Baelish") && ((circleX1 === 675) && (circleY1 === 530))) {
+        setTimeout(() => {
+            document.getElementById("trap1modal-wrap").style.display = "block"; 
+            document.getElementById("trap1").innerHTML = "<p>A wild group og Vale Knigths appears! Since you are " + firstPlayer1 + " the Knights tells you in an unpolite way to leave the area! You 3 spaces backwards!</p><button onclick='closeModal()'>I don't like The Vale...</button>";
+            
+            circleX1 = circleX1 + 450;
+            //trapo = [];
+            draw();
+        }, 100);
+    }
+    /* Player 2 Lannister trap as The Vale player
+    ----------------------*/
+    else if ((player1game.length === player2game.length) && (secondPlayer2 === "Petyr Baelish") && (circleX2 === 675) && (circleY2 === 530 )) {
+        setTimeout(() => {  
+           document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>A wild group og Vale Knigths appears! Since you are " + secondPlayer2 + " the Knights offers you a horse! You manage to move 3 more spaces forwards!</p><button onclick='closeModal()'>Chaos is a ladder!</button>";
+            circleX2 = circleX2 - 450;
+            //trapo = [];
+            draw();
+        }, 100);  
+    /* Player 2 trap as non-The Vale player 
+    ----------------------*/
+    } else if ((player1game.length === player2game.length) && (secondPlayer2 != "Petyr Baelish") && (circleX2 === 675) && (circleY2 === 530 )) {
+        setTimeout(() => {
+           document.getElementById("trap1modal-wrap").style.display = "block"; 
+            document.getElementById("trap1").innerHTML = "<p>A wild group og Vale Knigths appears! Since you are " + secondPlayer2 + " the Knights tells you in an unpolite way to leave the area! You 3 spaces backwards!</p><button onclick='closeModal()'>I don't like The Vale...</button>";
+           
+            circleX2 = circleX2 + 450;
+            //trapo = [];
+            draw();
+        }, 100);
+    }
+}
+
+function trap4() {
+    /* Player 1 Baratheon trap as Baratheon player
+    ----------------------*/
+    if ((player1game.length > player2game.length) && (firstPlayer1 === "Robert Baratheon") && ((circleX1 === 975) && (circleY1 === 380))) {
+        setTimeout(() => { 
+           document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>A Baratheon Army appears! Since you are " + firstPlayer1 + " the army welcomes their king! You join the army for a while and move 4 spaces forward!</p><button onclick='closeModal()'>Baratheon rules</button>";
+            circleX1 = circleX1 - 600;
+            
+            //trapo = [];
+            draw();
+        }, 100);  
+         /* Player 1 Baratheon trap as non-Baratheon player
+    ----------------------*/
+    } else if ((player1game.length > player2game.length) && (firstPlayer1 != "Robert Baratheon") && ((circleX1 === 975) && (circleY1 === 380))) {
+        setTimeout(() => {
+            document.getElementById("trap1modal-wrap").style.display = "block"; 
+            document.getElementById("trap1").innerHTML = "<p>A Baratheon Army appears! Since you are " + firstPlayer1 + " the Baratheon army attacs you! You run away and move 3 spaces backwards!</p><button onclick='closeModal()'>Bloody Baratheons..!/button>";
+            
+            circleX1 = 225;
+            circleY1 = 530;
+            //trapo = [];
+            draw();
+        }, 100);
+    }
+    /* Player 2 Baratheon trap as The Vale player
+    ----------------------*/
+    else if ((player1game.length === player2game.length) && (secondPlayer2 === "Robert Baratheon") && (circleX2 === 975) && (circleY2 === 380)) {
+        setTimeout(() => {  
+           document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>A Baratheon Army appears! Since you are " + secondPlayer2 + " the army welcomes their king! You join the army for a while and move 4 spaces forward!</p><button onclick='closeModal()'>Baratheon rules</button>";
+            circleX2 = circleX2 - 600;
+            //trapo = [];
+            draw();
+        }, 100);  
+    /* Player 2 trap as non-Baratheon player 
+    ----------------------*/
+    } else if ((player1game.length === player2game.length) && (secondPlayer2 != "Robert Baratheon") && (circleX2 === 975) && (circleY2 === 380)) {
+        console.log("tr")
+        setTimeout(() => {
+           document.getElementById("trap1modal-wrap").style.display = "block"; 
+            document.getElementById("trap1").innerHTML = "<p>A Baratheon Army appears! Since you are " + secondPlayer2 + " the Baratheon army attacs you! You run away and move 3 spaces backwards!</p><button onclick='closeModal()'>Bloody Baratheons..!/button>";
+           
+             circleX2 = 225;
+            circleY2 = 530;
+            //trapo = [];
+            draw();
+        }, 100);
+    }
+}
+
+function trap5() {
+    /* Player 1 Targaryan trap as Targaryan player
+    ----------------------*/
+    if ((player1game.length > player2game.length) && (firstPlayer1 === "Daenerys Targaryan") && ((circleX1 === 825) && (circleY1 === 230))) {
+        setTimeout(() => { 
+           document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>A dragon appears! Since you are " + firstPlayer1 + " the dragon alows you to fly on it's back! He flyes you to the throne!</p><button onclick='closeModal()'>Fire!</button>";
+            circleX1 = circleX1 - 750;
+            
+            //trapo = [];
+            draw();
+        }, 100);  
+         /* Player 1 Targaryan trap as non-Targaryan player
+    ----------------------*/
+    } else if ((player1game.length > player2game.length) && (firstPlayer1 != "Daenerys Targaryan") && ((circleX1 === 825) && (circleY1 === 230))) {
+        setTimeout(() => {
+            document.getElementById("trap1modal-wrap").style.display = "block"; 
+            document.getElementById("trap1").innerHTML = "<p>A dragon appears! Since you are " + firstPlayer1 + " the dragon shoots fire towards you! You run far away and move 6 spaces backwards!</p><button onclick='closeModal()'>I don't like fire... at all!/button>";
+            
+            circleX1 = 225;
+            circleY1 = 530;
+            //trapo = [];
+            draw();
+        }, 100);
+    }
+    /* Player 2 Targaryan trap as Targaryan player
+    ----------------------*/
+    else if ((player1game.length === player2game.length) && (secondPlayer2 === "Daenerys Targaryan") && (circleX2 === 825) && (circleY2 === 230)) {
+        setTimeout(() => {  
+           document.getElementById("trap1modal-wrap").style.display = "block"; document.getElementById("trap1").innerHTML = "<p>A dragon appears! Since you are " + firstPlayer1 + " the dragon alows you to fly on it's back! He flyes you to the throne!</p><button onclick='closeModal()'>Fire!</button>";
+            circleX2 = circleX2 - 750;
+            //trapo = [];
+            draw();
+        }, 100);  
+    /* Player 2 trap as non-Targaryan player 
+    ----------------------*/
+    } else if ((player1game.length === player2game.length) && (secondPlayer2 != "Daenerys Targaryan") && (circleX2 === 825) && (circleY2 === 230)) {
+        setTimeout(() => {
+           document.getElementById("trap1modal-wrap").style.display = "block"; 
+            document.getElementById("trap1").innerHTML = "<p>A Baratheon Army appears! Since you are " + secondPlayer2 + " the Baratheon army attacs you! You run away and move 3 spaces backwards!</p><button onclick='closeModal()'>I don't like fire... at all!/button>";
+           
+             circleX2 = 225;
+            circleY2 = 530;
+            //trapo = [];
+            draw();
+        }, 100);
+    }
+}
+
+ /*function trap2() {
+    
      if (player1game.length > player2game.length && circleX1 === 525 && circleY1 === 680) {
          setTimeout(() => {
              document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
@@ -637,8 +951,7 @@ function trap1() {
              draw();
          }, 100);
      } 
-     /* Player 2 trap 2
-    ----------------------*/
+   
      else if (player1game.length === player2game.length && circleX2 === 525 && circleY2 === 680) {
          setTimeout(() => { document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
              alert("It's a trap! Move back three squares");
@@ -647,7 +960,7 @@ function trap1() {
              draw();
          }, 100);
      }
- }
+ }*/
 
 function closeModal() {
      document.getElementById("trap1modal-wrap").style.display = "none"; 

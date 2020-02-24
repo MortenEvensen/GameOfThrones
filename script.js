@@ -25,20 +25,20 @@ function images(details) {
     modalimage2.innerHTML = "<img class='modalimage' src='" + details.characters[133].characterImageFull + "'>";
     storeImages.push(details.characters[133].characterImageFull);
     let image3 = document.getElementById("image3");
-    image3.innerHTML += "<img class='image' src='" + details.characters[59].characterImageFull + "'>" 
+    image3.innerHTML += "<img class='image' src='" + details.characters[300].characterImageFull + "'>" 
     let modalimage3 = document.getElementById("modalimage3");
-    modalimage3.innerHTML = "<img class='modalimage' src='" + details.characters[59].characterImageFull + "'>";
-   storeImages.push(details.characters[59].characterImageFull);
+    modalimage3.innerHTML = "<img class='modalimage' src='" + details.characters[300].characterImageFull + "'>";
+   storeImages.push(details.characters[300].characterImageFull);
     let image4 = document.getElementById("image4");
     image4.innerHTML += "<img class='image' src='" + details.characters[349].characterImageFull + "'>" 
     let modalimage4 = document.getElementById("modalimage4");
     modalimage4.innerHTML = "<img class='modalimage' src='" + details.characters[349].characterImageFull + "'>";
     storeImages.push(details.characters[349].characterImageFull);
     let image5 = document.getElementById("image5");
-    image5.innerHTML += "<img class='image' src='" + details.characters[15].characterImageFull + "'>" 
+    image5.innerHTML += "<img class='image' src='" + details.characters[120].characterImageFull + "'>" 
     let modalimage5 = document.getElementById("modalimage5");
-    modalimage5.innerHTML = "<img class='modalimage' src='" + details.characters[15].characterImageFull + "'>";
-    storeImages.push(details.characters[15].characterImageFull);
+    modalimage5.innerHTML = "<img class='modalimage' src='" + details.characters[120].characterImageFull + "'>";
+    storeImages.push(details.characters[120].characterImageFull);
     let image6 = document.getElementById("image6");
     image6.innerHTML += "<img class='image' src='" + details.characters[257].characterImageFull + "'>"
     let modalimage6 = document.getElementById("modalimage6");
@@ -50,10 +50,10 @@ function images(details) {
     modalimage7.innerHTML = "<img class='modalimage' src='" + details.characters[287].characterImageFull + "'>";
     storeImages.push(details.characters[287].characterImageFull);
     let image8 = document.getElementById("image8");
-    image8.innerHTML += "<img class='image' src='" + details.characters[345].characterImageFull + "'>" 
+    image8.innerHTML += "<img class='image' src='" + details.characters[44].characterImageFull + "'>" 
     let modalimage8 = document.getElementById("modalimage8");
-    modalimage8.innerHTML = "<img class='modalimage' src='" + details.characters[345].characterImageFull + "'>";
-    storeImages.push(details.characters[345].characterImageFull);
+    modalimage8.innerHTML = "<img class='modalimage' src='" + details.characters[44].characterImageFull + "'>";
+    storeImages.push(details.characters[44].characterImageFull);
     let image9 = document.getElementById("image9");
     image9.innerHTML += "<img class='image' src='" + details.characters[113].characterImageFull + "'>"
     let modalimage9 = document.getElementById("modalimage9");
@@ -68,11 +68,8 @@ function images(details) {
 }
 
 
-
-console.log("images: " + storeImages.length)
-
 const baseUrl = "https://anapioficeandfire.com/api/characters/";
-let id = [583,1346,339,1052,148,823,901,2024,529,238]
+let id = [583,1346,957,1052,565,823,901,271,529,238]
 
 
 var characterUrl1 = `${baseUrl}${id[0]}`;
@@ -467,25 +464,25 @@ function option3() {
     
     if (player1.length === 0 && player2.length === 0) {
         openModal3();
-        document.getElementById("modalcontent3").innerHTML = "<div id='card1'><p>Player 1 has chosen Ned Stark</p><p>Do you want to play as Ned Stark?</p><button onclick='option3Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+        document.getElementById("modalcontent3").innerHTML = "<div id='card1'><p>Player 1 has chosen Sansa Stark</p><p>Do you want to play as Sansa Stark?</p><button onclick='option3Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
     } else if (player1.length === 1 && player2.length === 0) {
         openModal3();
-     document.getElementById("modalcontent3").innerHTML = "<div id='card2'><p>Player 2 has chosen Ned Stark</p><p>Do you want to play as Ned Stark?</p><button onclick='option3Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+     document.getElementById("modalcontent3").innerHTML = "<div id='card2'><p>Player 2 has chosen Sansa Stark</p><p>Do you want to play as Sansa Stark?</p><button onclick='option3Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
     }
 }
 function option4() {
     
     if (player1.length === 0 && player2.length === 0) {
-       openModal4(); document.getElementById("modalcontent4").innerHTML = "<div id='card1'><p>Player 1 has chosen Ned Tyrion Lanister</p><p>Do you want to play as Tyrion Lanister?</p><button onclick='option4Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+       openModal4(); document.getElementById("modalcontent4").innerHTML = "<div id='card1'><p>Player 1 has chosen Tyrion Lanister</p><p>Do you want to play as Tyrion Lanister?</p><button onclick='option4Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
     } else if (player1.length === 1 && player2.length === 0) {
        openModal4(); document.getElementById("modalcontent4").innerHTML = "<div id='card2'><p>Player 2 has chosen Tyrion Lanister</p><p>Do you want to play as Tyrion Lanister?</p><button onclick='option4Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
     }
 }
 function option5() {
     if (player1.length === 0 && player2.length === 0) {
-       openModal5(); document.getElementById("modalcontent5").innerHTML = "<div id='card1'><p>Player 1 has chosen Arya Stark</p><p>Do you want to play as Arya Stark?</p><button onclick='option5Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+       openModal5(); document.getElementById("modalcontent5").innerHTML = "<div id='card1'><p>Player 1 has chosen King Joffrey</p><p>Do you want to play as King Joffrey?</p><button onclick='option5Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
     } else if (player1.length === 1 && player2.length === 0) {
-       openModal5(); document.getElementById("modalcontent5").innerHTML = "<div id='card2'><p>Player 2 has chosen Arya Stark</p><p>Do you want to play as Arya Stark?</p><button onclick='option5Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+       openModal5(); document.getElementById("modalcontent5").innerHTML = "<div id='card2'><p>Player 2 has chosen King Joffrey</p><p>Do you want to play as King Joffrey?</p><button onclick='option5Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
     }
 }
 function option6() {
@@ -504,9 +501,9 @@ function option7() {
 }
 function option8() {
     if (player1.length === 0 && player2.length === 0) {
-       openModal8(); document.getElementById("modalcontent8").innerHTML = "<div id='card1'><p>Player 1 has chosen Tormund Giantsbane</p><p>Do you want to play as Tormund Giantsbane?</p><button onclick='option8Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
+       openModal8(); document.getElementById("modalcontent8").innerHTML = "<div id='card1'><p>Player 1 has chosen Daenerys Targaryan</p><p>Do you want to play as Daenerys Targaryan?</p><button onclick='option8Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>"; 
     } else if (player1.length === 1 && player2.length === 0) {
-       openModal8(); document.getElementById("modalcontent8").innerHTML = "<div id='card2'><p>Player 2 has chosen Tormund Giantsbane</p><p>Do you want to play as Tormund Giantsbane?</p><button onclick='option8Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
+       openModal8(); document.getElementById("modalcontent8").innerHTML = "<div id='card2'><p>Player 2 has chosen Daenerys Targaryan</p><p>Do you want to play as Daenerys Targaryan?</p><button onclick='option8Yes()'>Yes!</button><button onclick='option1no()'>No...</button></div>";
     }
 }
 function option9() {
@@ -564,13 +561,13 @@ function option2Yes() {
 function option3Yes() {
     if (player1.length === 0 && player2.length === 0) {
         modal3.style.display = "none";
-        player1.push("Ned Stark")
+        player1.push("Sansa Stark")
         document.getElementById("charOption3").remove();
         document.getElementById("player1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[2] + "'>"
         document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
     } else if (player1.length === 1 && player2.length === 0) {
         modal3.style.display = "none";
-        player2.push("Ned Stark");
+        player2.push("Sansa Stark");
         document.getElementById("charOption3").remove();
         document.getElementById("player2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[2] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
@@ -600,13 +597,13 @@ function option4Yes() {
 function option5Yes() {
     if (player1.length === 0 && player2.length === 0) {
         modal5.style.display = "none";
-        player1.push("Arya Stark")
+        player1.push("King Joffrey")
         document.getElementById("charOption5").remove();
         document.getElementById("player1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[4] + "'>"
         document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
     } else if (player1.length === 1 && player2.length === 0) {
         modal5.style.display = "none";
-        player2.push("Arya Stark");
+        player2.push("King Joffrey");
         document.getElementById("charOption5").remove();
         document.getElementById("player2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[4] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
@@ -654,13 +651,13 @@ function option7Yes() {
 function option8Yes() {
     if (player1.length === 0 && player2.length === 0) {
         modal8.style.display = "none";
-        player1.push("Tormund Giantsbane")
+        player1.push("Daenerys Targaryan")
         document.getElementById("charOption8").remove();
         document.getElementById("player1").innerHTML = "Player 1 has chosen " + player1[0] + "!" + "<img class='imagePlayer' src='" + storeImages[7] + "'>"
         document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
     } else if (player1.length === 1 && player2.length === 0) {
         modal8.style.display = "none";
-        player2.push("Tormund Giantsbane");
+        player2.push("Daenerys Targaryan");
         document.getElementById("charOption8").remove();
         document.getElementById("player2").innerHTML = "Player 2 has chosen " + player2[0] + "!" + "<img class='imagePlayer' src='" + storeImages[7] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
