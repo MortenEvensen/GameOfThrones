@@ -468,23 +468,23 @@ function draw() {
     //y =780
     
     if (secondPlayer2 === "John Snow") {
-        ctx.drawImage(imageJohn, circleX2 - 35, circleY2 - 60,70,100)
+        ctx.drawImage(imageJohn, circleX2 - 45, circleY2 - 60,90,100)
     } else if (secondPlayer2 === "Khal Drogo") {
-        ctx.drawImage(imageDrogo, circleX2 - 35, circleY2 - 60,70,100)
+        ctx.drawImage(imageDrogo, circleX2 - 35, circleY2 - 50,70,100)
     } else if (secondPlayer2 === "Sansa Stark") {
-        ctx.drawImage(imageSansa, circleX2 - 35, circleY2 - 60,70,100)
+        ctx.drawImage(imageSansa, circleX2 - 40, circleY2 - 60,75,100)
     } else if (secondPlayer2 === "Tyrion Lannister") {
-        ctx.drawImage(imageTyrion, circleX2 - 35, circleY2 - 60,70,100)
+        ctx.drawImage(imageTyrion, circleX2 - 30, circleY2 - 60,60,100)
     } else if (secondPlayer2 === "King Joffrey") {
-        ctx.drawImage(imageGeofrey, circleX2 - 35, circleY2 - 60,70,100)
+        ctx.drawImage(imageGeofrey, circleX2 - 45, circleY2 - 60,90,100)
     } else if (secondPlayer2 === "Petyr Baelish") {
-        ctx.drawImage(imageBaelish, circleX2 - 35, circleY2 - 60,70,100)
+        ctx.drawImage(imageBaelish, circleX2 - 30, circleY2 - 60,70,100)
     } else if (secondPlayer2 === "Robert Baratheon") {
-        ctx.drawImage(imageRobert, circleX2 - 35, circleY2 - 60,70,100)
+        ctx.drawImage(imageRobert, circleX2 - 40, circleY2 - 60,80,100)
     } else if (secondPlayer2 === "Daenerys Targaryan") {
-        ctx.drawImage(imageRobert, circleX2 - 35, circleY2 - 60,70,100)
+        ctx.drawImage(imageDaenerys, circleX2 - 40, circleY2 - 60,80,100)
     } else if (secondPlayer2 === "Jamie Lannister") {
-        ctx.drawImage(imageJamie, circleX2 - 35, circleY2 - 60,70,100)
+        ctx.drawImage(imageJamie, circleX2 - 45, circleY2 - 60,85,100)
     } else if (secondPlayer2 === "Cersei Lannister") {
         ctx.drawImage(imageCersei, circleX2 - 35, circleY2 - 60,70,100)
     } 
@@ -505,23 +505,23 @@ function draw() {
     ctx.stroke();
     
     if (firstPlayer1 === "John Snow") {
-        ctx.drawImage(imageJohn, circleX1 - 35, circleY1 - 60,70,100)
+        ctx.drawImage(imageJohn, circleX1 - 45, circleY1 - 60,90,100)
     } else if (firstPlayer1 === "Khal Drogo") {
-        ctx.drawImage(imageDrogo, circleX1 - 35, circleY1 - 60,70,100)
+        ctx.drawImage(imageDrogo, circleX1 - 30, circleY1 - 60,60,100)
     } else if (firstPlayer1 === "Sansa Stark") {
-        ctx.drawImage(imageSansa, circleX1 - 35, circleY1 - 60,70,100)
+        ctx.drawImage(imageSansa, circleX1 - 40, circleY1 - 60,75,100)
     } else if (firstPlayer1 === "Tyrion Lannister") {
-        ctx.drawImage(imageTyrion, circleX1 - 35, circleY1 - 60,70,100)
+        ctx.drawImage(imageTyrion, circleX1 - 30, circleY1 - 60,60,100)
     } else if (firstPlayer1 === "King Joffrey") {
-        ctx.drawImage(imageGeofrey, circleX1 - 35, circleY1 - 60,70,100)
+        ctx.drawImage(imageGeofrey, circleX1 - 45, circleY1 - 60,90,100)
     } else if (firstPlayer1 === "Petyr Baelish") {
-        ctx.drawImage(imageBaelish, circleX1 - 35, circleY1 - 60,70,100)
+        ctx.drawImage(imageBaelish, circleX1 - 30, circleY1 - 60,70,100)
     } else if (firstPlayer1 === "Robert Baratheon") {
         ctx.drawImage(imageRobert, circleX1 - 35, circleY1 - 60,70,100)
     } else if (firstPlayer1 === "Daenerys Targaryan") {
         ctx.drawImage(imageDaenerys, circleX1 - 35, circleY1 - 60,70,100)
     } else if (firstPlayer1 === "Jamie Lannister") {
-        ctx.drawImage(imageJamie, circleX1 - 35, circleY1 - 60,70,100)
+        ctx.drawImage(imageJamie, circleX1 -45, circleY1 - 60,85,100)
     } else if (firstPlayer1 === "Cersei Lannister") {
         ctx.drawImage(imageCersei, circleX1 - 35, circleY1 - 60,70,100)
     } 

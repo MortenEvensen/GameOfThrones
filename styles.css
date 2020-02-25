@@ -108,6 +108,10 @@ h1 {
     opacity: 1;
 }
 
+.image-wrap {
+    height: 320px;
+}
+
 .modal-content {
 background: rgba(0,0,0,0.2);
   margin: auto;
@@ -129,8 +133,9 @@ background: rgba(0,0,0,0.2);
 
 h3 {
     font-weight: 900;
-    font-size: 20px;
+    font-size: 15px;
     padding: 10px 0 10px 0;
+    font-weight: 900;
 }
 p, li {
     font-size: 16px;
@@ -172,6 +177,9 @@ p, li {
 .image, .modalimage {
     max-width: 100%;
     margin: 0 auto;
+}
+.image {
+    
 }
 .player1, .player2 {
     flex: 1;
