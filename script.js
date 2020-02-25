@@ -195,8 +195,8 @@ function createChar1(details) {
     let modaltitles1 = document.getElementById("modaltitles1");
     let aliases1 = document.getElementById("aliases1");
     let modalaliases1 = document.getElementById("modalaliases1");
-    char1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
-    modalchar1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    modalchar1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p >Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -204,8 +204,8 @@ function createChar1(details) {
         modaltitles1.innerHTML += titles;
     }
     for (var i = 0; i< details.aliases.length; i++) {
-        var aliases = "<li>" + details.aliases[i] + "</li>"
-        aliases1.innerHTML += aliases;
+      var aliases = "<li>" + details.aliases[i] + "</li>"
+        aliases1.innerHTML += aliases; 
         var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases1.innerHTML += aliases;
     } 
@@ -217,17 +217,17 @@ function createChar2(details) {
     let modaltitles1 = document.getElementById("modaltitles2");
     let aliases1 = document.getElementById("aliases2");
     let modalaliases1 = document.getElementById("modalaliases2");
-    char2.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char2.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
     modalchar2.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
-        var titles = "<li>" + details.titles[i] + "</li>"
-        titles1.innerHTML = titles;
+    var titles = "<li>" + details.titles[i] + "</li>"
+      titles1.innerHTML = titles;
         var modaltitles = "<li>" + details.titles[i] + "</li>"
         modaltitles2.innerHTML += titles;
     }
     for (var i = 0; i< details.aliases.length; i++) {
-        var aliases = "<li>" + details.aliases[i] + "</li>"
-        aliases1.innerHTML = aliases;
+      var aliases = "<li>" + details.aliases[i] + "</li>"
+      aliases1.innerHTML = aliases;
          var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases2.innerHTML += aliases;
     }   
@@ -240,39 +240,39 @@ function createChar3(details) {
     let aliases1 = document.getElementById("aliases3");
     let modalaliases1 = document.getElementById("modalaliases3");
     modalchar3.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
-    char3.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char3.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
-        var titles = "<li>" + details.titles[i] + "</li>"
-        titles1.innerHTML += titles;
+       var titles = "<li>" + details.titles[i] + "</li>"
+    titles1.innerHTML += titles;
         var modaltitles = "<li>" + details.titles[i] + "</li>"
         modaltitles3.innerHTML += titles;
     }
     for (var i = 0; i< details.aliases.length; i++) {
-        var aliases = "<li>" + details.aliases[i] + "</li>"
-        aliases3.innerHTML += aliases;
+     var aliases = "<li>" + details.aliases[i] + "</li>"
+       aliases3.innerHTML += aliases;
          var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases3.innerHTML += aliases;
     }   
 }
 function createChar4(details) {
     let modalchar4 = document.getElementById("modalchar4");
-    modalchar4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    modalchar4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
      let modaltitles1 = document.getElementById("modaltitles4");
     let modalaliases1 = document.getElementById("modalaliases4");
     modalchar4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
     let char4 = document.getElementById("char4");
     let titles1 = document.getElementById("titles4");
     let aliases1 = document.getElementById("aliases4");
-    char4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
-        var titles = "<li>" + details.titles[i] + "</li>"
-        titles4.innerHTML += titles;
+    var titles = "<li>" + details.titles[i] + "</li>"
+      titles4.innerHTML += titles;
         var modaltitles = "<li>" + details.titles[i] + "</li>"
         modaltitles4.innerHTML += titles;
     }
     for (var i = 0; i< details.aliases.length; i++) {
-        var aliases = "<li>" + details.aliases[i] + "</li>"
-        aliases4.innerHTML += aliases;
+       var aliases = "<li>" + details.aliases[i] + "</li>"
+      aliases4.innerHTML += aliases;
         var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases4.innerHTML += aliases;
     } 
@@ -286,16 +286,16 @@ function createChar5(details) {
      let char5 = document.getElementById("char5");
     let titles1 = document.getElementById("titles5");
     let aliases1 = document.getElementById("aliases5");
-    char5.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char5.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
-        var titles = "<li>" + details.titles[i] + "</li>"
-        titles1.innerHTML += titles;
+     var titles = "<li>" + details.titles[i] + "</li>"
+      titles1.innerHTML += titles;
         var modaltitles = "<li>" + details.titles[i] + "</li>"
         modaltitles5.innerHTML += titles;
     }
     for (var i = 0; i< details.aliases.length; i++) {
-        var aliases = "<li>" + details.aliases[i] + "</li>"
-        aliases1.innerHTML += aliases;
+       var aliases = "<li>" + details.aliases[i] + "</li>"
+      aliases1.innerHTML += aliases;
         var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases5.innerHTML += aliases;
     }
@@ -308,15 +308,15 @@ function createChar6(details) {
      let char6 = document.getElementById("char6");
     let titles1 = document.getElementById("titles6");
     let aliases1 = document.getElementById("aliases6");
-    char6.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char6.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
-        titles1.innerHTML += titles;
+       titles1.innerHTML += titles;
         var modaltitles = "<li>" + details.titles[i] + "</li>"
         modaltitles6.innerHTML += titles;
     }
     for (var i = 0; i< details.aliases.length; i++) {
-        var aliases = "<li>" + details.aliases[i] + "</li>"
+       var aliases = "<li>" + details.aliases[i] + "</li>"
         aliases1.innerHTML += aliases;
         var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases6.innerHTML += aliases;
@@ -325,12 +325,12 @@ function createChar6(details) {
 function createChar7(details) {
     let modalchar7 = document.getElementById("modalchar7");
     modalchar7.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
-     let modaltitles1 = document.getElementById("modaltitles7");
+    let modaltitles1 = document.getElementById("modaltitles7");
     let modalaliases1 = document.getElementById("modalaliases7");
-  let char7 = document.getElementById("char7");
+    let char7 = document.getElementById("char7");
     let titles1 = document.getElementById("titles7");
     let aliases1 = document.getElementById("aliases7");
-    char7.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char7.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -345,22 +345,22 @@ function createChar7(details) {
     }
 }
 function createChar8(details) {
-     let modalchar8 = document.getElementById("modalchar8");
+    let modalchar8 = document.getElementById("modalchar8");
     modalchar8.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
-     let modaltitles1 = document.getElementById("modaltitles8");
+    let modaltitles1 = document.getElementById("modaltitles8");
     let modalaliases1 = document.getElementById("modalaliases8");
-   let char8 = document.getElementById("char8");
+    let char8 = document.getElementById("char8");
     let titles1 = document.getElementById("titles8");
     let aliases1 = document.getElementById("aliases8");
-    char8.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char8.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
-         var modaltitles = "<li>" + details.titles[i] + "</li>"
+        var modaltitles = "<li>" + details.titles[i] + "</li>"
         modaltitles8.innerHTML += titles;
     }
     for (var i = 0; i< details.aliases.length; i++) {
-        var aliases = "<li>" + details.aliases[i] + "</li>"
+       var aliases = "<li>" + details.aliases[i] + "</li>"
         aliases1.innerHTML += aliases;
         var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases8.innerHTML += aliases;
@@ -369,12 +369,12 @@ function createChar8(details) {
 function createChar9(details) {
      let modalchar9 = document.getElementById("modalchar9");
     modalchar9.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
-     let modaltitles1 = document.getElementById("modaltitles9");
+    let modaltitles1 = document.getElementById("modaltitles9");
     let modalaliases1 = document.getElementById("modalaliases9");
     let char9 = document.getElementById("char9");
     let titles1 = document.getElementById("titles9");
     let aliases1 = document.getElementById("aliases9");
-    char9.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char9.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -384,8 +384,8 @@ function createChar9(details) {
     for (var i = 0; i< details.aliases.length; i++) {
         var aliases = "<li>" + details.aliases[i] + "</li>"
         aliases1.innerHTML += aliases;
-         var modalaliases = "<li>" + details.aliases[i] + "</li>"
-        modalaliases8.innerHTML += aliases;
+        var modalaliases = "<li>" + details.aliases[i] + "</li>"
+        modalaliases9.innerHTML += aliases;
     }
 }
 function createChar10(details) {
@@ -396,7 +396,7 @@ function createChar10(details) {
      let char10 = document.getElementById("char10");
     let titles1 = document.getElementById("titles10");
     let aliases1 = document.getElementById("aliases10");
-    char10.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    char10.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -404,7 +404,7 @@ function createChar10(details) {
         modaltitles10.innerHTML += titles;
     }
     for (var i = 0; i< details.aliases.length; i++) {
-        var aliases = "<li>" + details.aliases[i] + "</li>"
+       var aliases = "<li>" + details.aliases[i] + "</li>"
         aliases1.innerHTML += aliases;
          var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases10.innerHTML += aliases;
