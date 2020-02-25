@@ -253,6 +253,7 @@ var player1game = [];
 var player2game = [];
 
 function dice() {
+
     //console.log("Player1: " + player1[0])
      //console.log("Player2: " + player2[0])
     if (player1game.length == player2game.length) {
@@ -311,7 +312,7 @@ function dice() {
     }
 
 } else if (player1game.length > player2game.length) {
-    document.getElementById("turn").innerHTML = "<p>Next up: Player one/" + firstPlayer1 + "</p>"
+   document.getElementById("turn").innerHTML = "<p>Next up: Player one/" + firstPlayer1 + "</p>"
     player2game.push(1);
     var dico = Math.floor(Math.random() * 6) + 1;
     document.getElementById("dice").innerHTML = "<p>You got: " + dico + "</p>";
@@ -364,61 +365,17 @@ function dice() {
         }
     }
 }
-    function six() {
+    
+    function six() { 
+        
     if (dico === 6 && dicolini === trapo.length) {
-        console.log("six!")
-        if (player1game.length > player2game.length) {
-            console.log("six if")
-            document.getElementById("six").innerHTML = "<p>You (" + firstPlayer1 + ") got a six, therefore you get to throw the dice one more time!</p>";
+        if (player1game.length > player2game.length) { document.getElementById("six").innerHTML = "<p>You (" + firstPlayer1 + ") got a six, therefore you get to throw the dice one more time!</p>";
             player1game = [];
             player2game = [];
-        } else if (player1game.length === player2game.length) {
-            console.log("six else")
-            document.getElementById("six").innerHTML = "<p>You (" + secondPlayer2 + ") got a six, therefore you get to throw the dice one more time!</p>";
+        } else if (player1game.length === player2game.length) { document.getElementById("six").innerHTML = "<p>You (" + secondPlayer2 + ") got a six, therefore you get to throw the dice one more time!</p>";
             player1game = [1];
             player2game = [];
         }
-    }
+    } 
 }
 }
-
-
-     function nyFunction() {
-         if (player1game.length > player2game.length) {
-            setTimeout(() => {
-                document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
-                alert("It's a trap! Move back one square");
-                circleX1 = circleX1 + 150;
-                trapo = [];
-                draw();
-            }, 100);
-             } else if (player1game.length === player2game.length) {
-                 setTimeout(() => {
-                document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
-                alert("It's a trap! Move back one square");
-                circleX2 = circleX2 + 150;
-                trapo = [];
-                draw();
-            }, 100);
-             }
-        }
- function nyFunction2() {
-     if (player1game.length > player2game.length) {
-            setTimeout(() => {
-                document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
-                alert("It's a trap! Move back three squares");
-                circleX1 = circleX1 + 450;
-                trapo = [];
-                draw();
-            }, 100);
-         } else if (player1game.length === player2game.length) {
-              setTimeout(() => {
-                document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
-                alert("It's a trap! Move back three squares");
-                circleX2 = circleX2 + 450;
-                trapo = [];
-                draw();
-            }, 100);
-         }
-        }
- 

@@ -22,7 +22,12 @@ Retrieve player info from first page
 */
 var firstPlayer1 = sessionStorage.getItem("playerUno");
 var secondPlayer2 = sessionStorage.getItem("playerDos");
-
+var trapo = [];
+var dicolini = "";
+var dico = dicolini;
+var player1game = [1,1];
+var player2game = [1,1];
+var diceNumber = "";
 /*
 Launch initial game page
 */
@@ -499,8 +504,6 @@ function draw() {
     ctx.strokeText(firstPlayer1, circleX1 - 35,circleY1+45);
     ctx.stroke();
     
-      /*ctx.drawImage(imageTyrion, circleX1 - 35, circleY1 - 60,70,100)*/
-    
     if (firstPlayer1 === "John Snow") {
         ctx.drawImage(imageJohn, circleX1 - 35, circleY1 - 60,70,100)
     } else if (firstPlayer1 === "Khal Drogo") {
@@ -522,16 +525,6 @@ function draw() {
     } else if (firstPlayer1 === "Cersei Lannister") {
         ctx.drawImage(imageCersei, circleX1 - 35, circleY1 - 60,70,100)
     } 
-    
-   
-    
-    
-    
-    console.log("Dico: " + dico);
-    console.log("Dicolini: " + dicolini);
-    console.log("Trapo:" + trapo)
-    
-   
     
       /* Checking for traps 
     ----------------------*/
@@ -576,16 +569,26 @@ function draw() {
         trap5();
     };
     
+    /* Checking for winner
+    ----------------------*/
+    if ((circleX1 <= 1125) && (circleY1 === 80 )){
+        victory();   
+        //trapo = [];
+    } else if((circleX2 <= 1125) && (circleY2 === 80) ) {
+        victory();
+    };
+    
+   if (player1game.length > player2game.length && (trapo.length == dicolini)) {  document.getElementById("turn").innerHTML = "<p class='playerMessage'>Player two/" + secondPlayer2 + ", it's your turn!</p>"
+   }  else if (player1game.length == player2game.length && (trapo.length == dicolini)) {
+       document.getElementById("turn").innerHTML = "<p class='playerMessage'>Player one/" + firstPlayer1 + ", it's your turn!</p>"
+   } 
 }
+
+
  //console.log("Trapo.length: " + trapo.length);
     /* Dice and game
     -----------------*/
-var trapo = [];
-var dicolini = "";
-var dico = dicolini;
-var player1game = [1,1];
-var player2game = [1,1];
-var diceNumber = "";
+
 //console.log("dicolini" + dicolini[0])
 //console.log("trapo" + trapo[0])
 function dice() {
@@ -596,12 +599,13 @@ var diceAni = document.getElementById("diceAnimation");
      /* Player 1
     -----------------*/
     if (player1game.length === player2game.length) {
-        document.getElementById("turn").innerHTML = "   <p>Next up: Player two/" + secondPlayer2 + "    </p>"
+       
         player1game.push(1);
         trapo = [];    
         var dico = Math.floor(Math.random() * 6) + 1;
         document.getElementById("dice").innerHTML = "<p>You got: " + dico + "</p>";
         diceAni.innerHTML = "<img src='graphics/dice/dice" + dico + ".png'>"
+        
         
         
         for (var i = 0; i < dico; i++) {
@@ -646,7 +650,7 @@ var diceAni = document.getElementById("diceAnimation");
     /* Player 2
     -----------------*/
     else if (player1game.length > player2game.length) {
-    document.getElementById("turn").innerHTML = "<p>Next up: Player one/" + firstPlayer1 + "</p>"
+    
         player2game.push(1);
         trapo = [];
         var dico = Math.floor(Math.random() * 6) + 1;
@@ -692,13 +696,14 @@ var diceAni = document.getElementById("diceAnimation");
     /* If player gets 6
     --------------------*/
     function six() {
+        document.getElementById("six").innerHTML = "";
         if (dicolini === 6 && dicolini === trapo.length) {
-            if (player1game.length >    player2game.length) {
-                console.log("six if");               document.getElementById("six").innerHTML = "<p>You (" + firstPlayer1 + ")     got a six, therefore you get to throw   the dice one more time!</p>";
+            if (player1game.length >    player2game.length) {              document.getElementById("turn").innerHTML = "<p class='playerMessage'>Player one/" + firstPlayer1 + ", it's still your turn!</p>"; document.getElementById("six").innerHTML = "<p class='six'>Player One got a six, therefore you get to throw the dice one more time!</p>";
                 player1game.shift();               
             } else if (player1game.length === player2game.length) {
                 console.log("six else")
-                document.getElementById("six").innerHTML = "<p>You (" + secondPlayer2 + ") got a six, therefore you get to throw the dice one more time!</p>";
+                document.getElementById("turn").innerHTML = "<p class='playerMessage'>Player two/" + secondPlayer2 + ", it's still your turn!</p>";
+                document.getElementById("six").innerHTML = "<p class='six'>Player Two got a six, therefore you get to throw the dice one more time!</p>";
                 
                 player2game.shift();
             }
@@ -987,28 +992,22 @@ function trap5() {
         }, 100);
     }
 }
+function save() {
+    if (player1.length === 1 && player2.length === 1)
+    sessionStorage.setItem("playerUno", player1);
+    sessionStorage.setItem("playerDos", player2)
+}
 
- /*function trap2() {
+function victory() {
+    if ((circleX1 <= 1125) && (circleY1 === 80 )) {
+        sessionStorage.setItem("winner", firstPlayer1);
+        window.open("victory.html", "_self");
+        
+        
+    } else if ((circleX2 <= 1125) && (circleY2 === 80)) { sessionStorage.setItem("winner", secondPlayer2); window.open("victory.html", "_self"); 
     
-     if (player1game.length > player2game.length && circleX1 === 525 && circleY1 === 680) {
-         setTimeout(() => {
-             document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
-             alert("It's a trap! Move back three squares");
-             circleX1 = circleX1 + 450;
-             //trapo = [];
-             draw();
-         }, 100);
-     } 
-   
-     else if (player1game.length === player2game.length && circleX2 === 525 && circleY2 === 680) {
-         setTimeout(() => { document.getElementById("message").innerHTML = "<p>It's a trap! Move back one square</p>";
-             alert("It's a trap! Move back three squares");
-              circleX2 = circleX2 + 450;
-             //trapo = [];
-             draw();
-         }, 100);
-     }
- }*/
+  }
+}
 
 function closeModal() {
     document.getElementById("diceButton").disabled = false;

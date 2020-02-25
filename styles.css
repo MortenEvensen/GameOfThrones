@@ -139,6 +139,7 @@ p, li {
 
 .character-wrap2 {
     display: flex;
+    flex-direction: row;
 }
 
 .character-wrap:hover {
@@ -306,7 +307,7 @@ button:active {
 -----------*/
 .canvas {
      padding: 0;
-    margin: 150px auto;
+    margin: 120px 0 0 30px;
     display: block;
     width: 1200px;
     height: 900px;
@@ -319,18 +320,120 @@ button:active {
     background-color: white;
 }
 
-.body {
-    
-}
-
-.game-wrap {
-    
-}
 .canvas-wrap {
-    flex: 1;
+    
 }
 
 .text-wrap {
-    flex: 1;
-    margin: 200px 0 0 0;
+    position: relative;
+    left: 1300px;
+    top: 100px;
+    border: 2px solid white;
+    width: 300px;
+    padding: 20px;
+}
+.footer {
+        margin-top: 500px;
+        margin-bottom: 0;
+    }
+.playerMessage {
+    font-size: 25px;
+    margin: 0 0 10px 0; 
+}
+.six {
+    font-size: 20px;
+}
+/* Smaller screens
+------------*/
+
+@media only screen and (max-width: 1000px) and (min-width: 601px){
+    .character-wrap2 {
+        
+        margin: 0 auto;
+
+    }
+    
+    .character1 {
+        height: 150px;
+        width: 200px;
+        min-width: 50px;
+        max-width: 200px;
+        
+    }
+    .image, .modalimage {
+    width: 250px;
+    
+}
+     h1 {
+        font-size: 20px;
+         letter-spacing: 2px
+    }
+    h3 {
+        font-size: 12px;
+    }
+    p {
+        font-size: 12px;
+    }
+    #image8 {
+    text-align: center;
+        height: 120px;
+}
+    .imagePlayer {
+        width: 50px;
+}
+    .play {
+        font-size: 25px;
+    }
+     .footer {
+        margin-top: 500px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #content-wrap {
+    
+}
+    .character-wrap2 {
+        
+        height: 100px;
+        margin: 10px auto;
+
+    }
+    
+    .character1 {
+        min-width: 20px;
+        max-width: 50px;
+        height: 100px;
+        margin: 130px 10px 530px 0;
+        
+        
+    }
+    .image, .modalimage {
+    
+}
+     h1 {
+        font-size: 15px;
+         letter-spacing: 2px
+    }
+    h3 {
+        font-size: 10px;
+    }
+    p {
+        font-size: 8px;
+    }
+    #image8 {
+    text-align: center;
+        height: 120px;
+}
+    .imagePlayer {
+        width: 50px;
+}
+    .play {
+        font-size: 20px;
+    }
+    .footer {
+        margin-top: 500px;
+        margin-bottom: 0;
+    }
 }

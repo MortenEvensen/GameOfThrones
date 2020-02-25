@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+     <title>Game of Thrones Board Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="styles.css">
 </head>
 <body class="body">
@@ -8,22 +10,6 @@
         <div id="trap1">
         </div>
     </div>
-   <!-- <div id="trap2modal-wrap" class="trapmodal">
-        <div id="trap2">
-        </div>
-    </div>
-    <div id="trap3modal-wrap" class="trapmodal">
-        <div id="trap3">            
-        </div>
-    </div>
-    <div id="trap4modal-wrap" class="trapmodal">  
-        <div id="trap4">
-        </div>
-    </div>
-    <div id="trap5modal-wrap" class="trapmodal">
-        <div id="trap5">
-        </div>
-    </div> -->
     <audio id="myAudio">
         <source src="move.mp3" type="audio/ogg">
         <source src="move.mp3" type="audio/mpeg">
@@ -41,8 +27,27 @@
     </header>
 <div class="game-wrap">
     <div class="canvas-wrap">
+        <div class="game">
         <canvas class="canvas" id="myCanvas" width="1200" height="900">
         </canvas>
+              <div class="text-wrap">
+                  
+            <p id="turn" class='playerMessage'>Player One goes first!</p>
+        
+        <div id="diceAnimation"></div>
+        <div id="dice">
+        <img src="graphics/dice/dice1.png">
+        </div>
+                  
+        <div id="message"></div>
+        <button type="button" id="diceButton" onclick="dice()">Throw Dice</button>
+        
+        <div id="counter"></div>
+        
+        <div id="six">
+        </div>
+    </div>
+            </div>
         <div style="display:none;">
         <img id="starkSource" src="graphics/banners/Stark-banner.png" width="100" height="100">
         </div>
@@ -74,27 +79,7 @@
         </div>
     
     </div>
-    <div class="text-wrap">
-        <div id="diceAnimation"></div>
-        <div id="dice">
-        <img src="graphics/dice/dice1.png">
-        </div>
-        
-        <button type="button" id="diceButton" onclick="dice()">Throw Dice</button>
-        <div id="message"></div>
-        <div id="counter"></div>
-        <div id="turn">
-            <p>It's player one's turn</p>
-        </div>
-        <div id="player1">
-            <p>Player One</p>
-        </div>
-        <div id="player2">
-            <p>Player Two</p>
-        </div>
-        <div id="six">
-        </div>
-    </div>
+  
 </div>
     <script src="script.js"></script>
     <script src="game2.js"></script>
