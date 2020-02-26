@@ -351,6 +351,19 @@ button:active {
 .six {
     font-size: 20px;
 }
+
+/* Victory page
+------------*/
+
+.winner-wrap {
+    margin: 100px 0 0 0;
+    text-align: center;
+}
+
+.winner {
+    font-size: 30px;
+}
+
 /* Smaller screens
 ------------*/
 

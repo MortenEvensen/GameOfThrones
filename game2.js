@@ -1001,9 +1001,7 @@ function save() {
 function victory() {
     if ((circleX1 <= 1125) && (circleY1 === 80 )) {
         sessionStorage.setItem("winner", firstPlayer1);
-        window.open("victory.html", "_self");
-        
-        
+        window.open("victory.html", "_self"); 
     } else if ((circleX2 <= 1125) && (circleY2 === 80)) { sessionStorage.setItem("winner", secondPlayer2); window.open("victory.html", "_self"); 
     
   }
