@@ -246,8 +246,10 @@ button {
 }
 .modalButton {
     font-size: 20px;
-    min-width: 100px;
-    max-width: 100%;
+    min-width: 150px;
+    min-height: 100px;
+    max-width: 300%;
+    
     
 }
 button:hover {
@@ -358,10 +360,31 @@ button:active {
 .winner-wrap {
     margin: 100px 0 0 0;
     text-align: center;
+    display: flex;
+}
+
+#sword, #middle, #shield {
+    flex: 1;
+}
+
+#sword, #shield {
+    margin: 100px 5px 0 5px;
 }
 
 .winner {
     font-size: 30px;
+}
+
+.winner-image-wrap {
+    
+    padding: 50px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.winner-image-wrap img {
+    max-height: 500px;
+    min-height: 250px;
 }
 
 /* Smaller screens

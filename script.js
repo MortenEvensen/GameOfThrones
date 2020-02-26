@@ -248,7 +248,7 @@ function createChar3(details) {
     }
     for (var i = 0; i< details.aliases.length; i++) {
      var aliases = "<li>" + details.aliases[i] + "</li>"
-       aliases3.innerHTML += aliases;
+       aliases1.innerHTML += aliases;
          var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases3.innerHTML += aliases;
     }   
@@ -271,7 +271,7 @@ function createChar4(details) {
     }
     for (var i = 0; i< details.aliases.length; i++) {
        var aliases = "<li>" + details.aliases[i] + "</li>"
-      aliases4.innerHTML += aliases;
+      aliases1.innerHTML += aliases;
         var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases4.innerHTML += aliases;
     } 
@@ -751,6 +751,7 @@ function save() {
     sessionStorage.setItem("playerUno", player1);
     
     sessionStorage.setItem("playerDos", player2)
+    sessionStorage.setItem("images", storeImages);
 }
 
 // Get the modal
