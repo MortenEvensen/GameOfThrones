@@ -91,8 +91,6 @@ video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
-
 /* HTML5 display-role reset for older browsers */
 
 article,
@@ -112,7 +110,7 @@ section {
 body {
 	line-height: 1;
 	background-color: black;
-	font-family: 'Cinzel', serif;
+	font-family: 'Cinzel', sans-serif;
 	color: white;
 }
 
@@ -130,7 +128,6 @@ table {
 /* Index page
 ---------------*/
 
-
 /* Header font
 ---------------*/
 
@@ -147,7 +144,7 @@ table {
 }
 
 h1 {
-	font-family: "gameOfThrones";
+	font-family: "gameOfThrones","EB Garamond", sans-serif;
 	font-weight: 900;
 	color: black;
 }
