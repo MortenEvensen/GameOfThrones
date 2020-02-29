@@ -636,7 +636,7 @@ function dice() {
                     circleX1 = circleX1 - 150;
                     draw();
                     var audio = document.getElementById("myAudio");
-                    audio.play();
+                    //audio.play();
                     six();
                     disableButton();
                 } 
@@ -648,7 +648,7 @@ function dice() {
                     circleX1 = 1125;
                     draw();
                     var audio = document.getElementById("myAudio");
-                    audio.play()
+                    //audio.play()
                     six();
                     disableButton();
                 }
@@ -695,7 +695,7 @@ function dice() {
                     circleX2 = circleX2 - 150;
                     draw();
                     var audio = document.getElementById("myAudio");
-                    audio.play();
+                    //audio.play();
                     six();
                     disableButton();
                 } 
@@ -707,7 +707,7 @@ function dice() {
                     circleX2 = 1125;
                     draw();
                     var audio = document.getElementById("myAudio");
-                    audio.play()
+                    //audio.play()
                     six();
                     disableButton();
                 }
@@ -1032,7 +1032,36 @@ function victory() {
 
 /* If a trap modal is closed, remove the modal and make the dice button able
 -------------------------------------------*/
+
 function closeModal() {
     document.getElementById("diceButton").disabled = false;
     document.getElementById("trap1modal-wrap").style.display = "none";
 }
+
+/* Close modal with "Enter"/"Return" key
+-------------------------------------------*/
+document.addEventListener("keyup", function(event) {
+    if ((document.getElementById("trap1modal-wrap").style.display === "block")) {
+    closeModal();
+        } 
+/* Throw dice with "Enter"/"Return" key (not if modal is open or a player is moving)
+-------------------------------------------*/
+    else if ((event.keyCode === 13) && (document.getElementById("diceButton").disabled === false) && (document.getElementById("trap1modal-wrap").style.display = "none")) {
+            console.log("Hei")
+        dice();
+        }
+})
+
+
+/* Throw dice with "Enter"/"Return" key, only if the dice button is not disabled
+-------------------------------------------
+document.addEventListener("keyup", function(event) {
+    if ((event.keyCode === 13) && ( document.getElementById("diceButton").disabled === false) && (document.getElementById("trap1modal-wrap").style.display === "none")) {
+        console.log("Hei")
+        dice();
+        
+    };
+})*/
+
+
+

@@ -400,6 +400,10 @@ button:active {
     min-height: 250px;
 }
 
+#trap1modal-wrap {
+    display: none;
+}
+
 /* Smaller screens
 ------------*/
 
