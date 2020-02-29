@@ -132,8 +132,10 @@ table {
 ---------------*/
 
 @font-face {
-	font-family: "gameOfThrones";
-	src: url("GameOfThrones.ttf") format("truetype");
+    font-family: "gameOfThrones";
+    src: url("fonts/GameofThrones.ttf")      format("truetype"),
+        url("fonts/GameofThrones.woff") 
+        format("woff") 
 }
 
 .header {
