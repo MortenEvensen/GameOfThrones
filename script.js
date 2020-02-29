@@ -1,3 +1,6 @@
+/* Fetch house information
+--------------------------*/
+
 fetch("https://raw.githubusercontent.com/joakimskoog/AnApiOfIceAndFire/master/data/houses.json")
   .then((response) => {
     return response.json();
@@ -25,7 +28,8 @@ function houses(details) {
     baelishHouse = details[9].Name;
    
 }
-
+/* Fetch links to images
+--------------------------*/
 fetch("https://raw.githubusercontent.com/jeffreylancaster/game-of-thrones/master/data/characters.json")
   .then((response) => {
     return response.json();
@@ -37,55 +41,78 @@ fetch("https://raw.githubusercontent.com/jeffreylancaster/game-of-thrones/master
     .catch(function(error) {
     console.log("Error");
 })
-
+/* Store the images from function images()
+--------------------------*/
 var storeImages = [];
+
+/* Generate images for cards and modals
+--------------------------*/
 function images(details) {
-    
+/* Image 1 - John Snow
+--------------------------*/
     let image1 = document.getElementById("image1");
     image1.innerHTML = "<img class='image' src='" + details.characters[123].characterImageFull + "'>";
     let modalimage1 = document.getElementById("modalimage1");
     modalimage1.innerHTML = "<img class='modalimage' src='" + details.characters[123].characterImageFull + "'>";
     storeImages.push(details.characters[123].characterImageFull);
+/* Image 2 - Khal Drogo
+--------------------------*/
     let image2 = document.getElementById("image2");
     image2.innerHTML = "<img class='image' src='" + details.characters[133].characterImageFull + "'>"
     let modalimage2 = document.getElementById("modalimage2");
     modalimage2.innerHTML = "<img class='modalimage' src='" + details.characters[133].characterImageFull + "'>";
+/* Image 3 - Sansa Stark
+--------------------------*/
     storeImages.push(details.characters[133].characterImageFull);
     let image3 = document.getElementById("image3");
     image3.innerHTML += "<img class='image' src='" + details.characters[300].characterImageFull + "'>" 
     let modalimage3 = document.getElementById("modalimage3");
     modalimage3.innerHTML = "<img class='modalimage' src='" + details.characters[300].characterImageFull + "'>";
-   storeImages.push(details.characters[300].characterImageFull);
+    storeImages.push(details.characters[300].characterImageFull);
+/* Image 4 - Tyrion Lannister
+--------------------------*/
     let image4 = document.getElementById("image4");
     image4.innerHTML += "<img class='image' src='" + details.characters[349].characterImageFull + "'>" 
     let modalimage4 = document.getElementById("modalimage4");
     modalimage4.innerHTML = "<img class='modalimage' src='" + details.characters[349].characterImageFull + "'>";
     storeImages.push(details.characters[349].characterImageFull);
+/* Image 5 - King Joffrey
+--------------------------*/
     let image5 = document.getElementById("image5");
     image5.innerHTML += "<img class='image' src='" + details.characters[120].characterImageFull + "'>" 
     let modalimage5 = document.getElementById("modalimage5");
     modalimage5.innerHTML = "<img class='modalimage' src='" + details.characters[120].characterImageFull + "'>";
     storeImages.push(details.characters[120].characterImageFull);
+/* Image 6 - Petyr Baelish
+--------------------------*/
     let image6 = document.getElementById("image6");
     image6.innerHTML += "<img class='image' src='" + details.characters[257].characterImageFull + "'>"
     let modalimage6 = document.getElementById("modalimage6");
     modalimage6.innerHTML = "<img class='modalimage' src='" + details.characters[257].characterImageFull + "'>";
     storeImages.push(details.characters[257].characterImageFull);
+/* Image 7 - Robert Baratheon
+--------------------------*/
     let image7 = document.getElementById("image7");
     image7.innerHTML += "<img class='image' src='" + details.characters[287].characterImageFull + "'>" 
     let modalimage7 = document.getElementById("modalimage7");
     modalimage7.innerHTML = "<img class='modalimage' src='" + details.characters[287].characterImageFull + "'>";
     storeImages.push(details.characters[287].characterImageFull);
+/* Image 8 - Daenerys Targarien
+--------------------------*/
     let image8 = document.getElementById("image8");
     image8.innerHTML += "<img class='image' src='" + details.characters[44].characterImageFull + "'>" 
     let modalimage8 = document.getElementById("modalimage8");
     modalimage8.innerHTML = "<img class='modalimage' src='" + details.characters[44].characterImageFull + "'>";
     storeImages.push(details.characters[44].characterImageFull);
+/* Image 9 - Jamie Lannister
+--------------------------*/
     let image9 = document.getElementById("image9");
     image9.innerHTML += "<img class='image' src='" + details.characters[113].characterImageFull + "'>"
     let modalimage9 = document.getElementById("modalimage9");
     modalimage9.innerHTML = "<img class='modalimage' src='" + details.characters[113].characterImageFull + "'>";
     storeImages.push(details.characters[113].characterImageFull);
+/* Image 10 - Cersei Lannister
+--------------------------*/
     let image10 = document.getElementById("image10");
     image10.innerHTML += "<img class='image' src='" + details.characters[38].characterImageFull + "'>" 
     let modalimage10 = document.getElementById("modalimage10");
@@ -95,12 +122,15 @@ function images(details) {
 }
 
 
-
-
+/* Base-Url for character information
+------------------------------------*/
 const baseUrl = "https://anapioficeandfire.com/api/characters/";
+/* id for the 10 different characters
+------------------------------------*/
 let id = [583,1346,957,1052,565,823,901,1303,529,238]
 
-
+/* Url + ID for finding the rigth character url
+------------------------------------------------*/
 var characterUrl1 = `${baseUrl}${id[0]}`;
 var characterUrl2 = `${baseUrl}${id[1]}`;
 var characterUrl3 = `${baseUrl}${id[2]}`;
@@ -112,9 +142,8 @@ var characterUrl8 = `${baseUrl}${id[7]}`;
 var characterUrl9 = `${baseUrl}${id[8]}`;
 var characterUrl10 = `${baseUrl}${id[9]}`;   
 
-/*
-Character page
-*/
+/* Fetching the 10 different Urls for characters
+------------------------------------------------*/
 
 fetch(characterUrl1)
   .then((response) => {
@@ -218,21 +247,23 @@ fetch(characterUrl10)
 })
 
 
-
-
-
-
-
-
-function createChar1(details) {    
+/* Create characters and modals
+------------------------------------------------*/
+function createChar1(details) {  
+/* Find id's in html, cards and modal
+------------------------------------------------*/
     let char1 = document.getElementById("char1");
     let modalchar1 = document.getElementById("modalchar1");
     let titles1 = document.getElementById("titles1");
     let modaltitles1 = document.getElementById("modaltitles1");
     let aliases1 = document.getElementById("aliases1");
-    let modalaliases1 = document.getElementById("modalaliases1");
+      let modalaliases1 = document.getElementById("modalaliases1");
+/* Adding information in the id's
+------------------------------------------------*/      
     char1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + starkHouse + "</p>";
     modalchar1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p >Culture: " + details.culture + "</p>";
+/* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -247,36 +278,48 @@ function createChar1(details) {
     } 
  }
 function createChar2(details) {
+    /* Find id's in html, cards and modal
+------------------------------------------------*/
     let char2 = document.getElementById("char2");
     let modalchar2 = document.getElementById("modalchar2");
     let titles1 = document.getElementById("titles2");
     let modaltitles1 = document.getElementById("modaltitles2");
     let aliases1 = document.getElementById("aliases2");
+/* Adding information in the id's
+------------------------------------------------*/
     let modalaliases1 = document.getElementById("modalaliases2");
     char2.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + dothrakiHouse + "</p>";
     modalchar2.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    /* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
     var titles = "<li>" + details.titles[i] + "</li>"
-      titles1.innerHTML = titles;
+    titles1.innerHTML = titles;
         var modaltitles = "<li>" + details.titles[i] + "</li>"
         modaltitles2.innerHTML += titles;
     }
     for (var i = 0; i< details.aliases.length; i++) {
       var aliases = "<li>" + details.aliases[i] + "</li>"
       aliases1.innerHTML = aliases;
-         var modalaliases = "<li>" + details.aliases[i] + "</li>"
+        var modalaliases = "<li>" + details.aliases[i] + "</li>"
         modalaliases2.innerHTML += aliases;
     }   
 }
 function createChar3(details) {
+    /* Find id's in html, cards and modal
+------------------------------------------------*/
     let char3 = document.getElementById("char3");
     let modalchar3 = document.getElementById("modalchar3");
     let titles1 = document.getElementById("titles3");
     let modaltitles1 = document.getElementById("modaltitles3");
     let aliases1 = document.getElementById("aliases3");
+/* Adding information in the id's
+------------------------------------------------*/
     let modalaliases1 = document.getElementById("modalaliases3");
     modalchar3.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
     char3.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + starkHouse + "</p>";
+        /* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
        var titles = "<li>" + details.titles[i] + "</li>"
     titles1.innerHTML += titles;
@@ -291,6 +334,8 @@ function createChar3(details) {
     }   
 }
 function createChar4(details) {
+    /* Find id's in html, cards and modal
+------------------------------------------------*/
     let modalchar4 = document.getElementById("modalchar4");
     modalchar4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
      let modaltitles1 = document.getElementById("modaltitles4");
@@ -299,13 +344,18 @@ function createChar4(details) {
     let char4 = document.getElementById("char4");
     let titles1 = document.getElementById("titles4");
     let aliases1 = document.getElementById("aliases4");
+    /* Adding information in the id's
+------------------------------------------------*/
     char4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + lannisterHouse + "</p>";
+            /* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
     var titles = "<li>" + details.titles[i] + "</li>"
       titles4.innerHTML += titles;
         var modaltitles = "<li>" + details.titles[i] + "</li>"
         modaltitles4.innerHTML += titles;
     }
+    
     for (var i = 0; i< details.aliases.length; i++) {
        var aliases = "<li>" + details.aliases[i] + "</li>"
       aliases1.innerHTML += aliases;
@@ -314,6 +364,8 @@ function createChar4(details) {
     } 
 }
 function createChar5(details) {
+    /* Find id's in html, cards and modal
+------------------------------------------------*/
      let modalchar5 = document.getElementById("modalchar5");
     modalchar5.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
      let modaltitles1 = document.getElementById("modaltitles5");
@@ -322,7 +374,11 @@ function createChar5(details) {
      let char5 = document.getElementById("char5");
     let titles1 = document.getElementById("titles5");
     let aliases1 = document.getElementById("aliases5");
+    /* Adding information in the id's
+------------------------------------------------*/
     char5.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + lannisterHouse + "</p>";
+    /* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
      var titles = "<li>" + details.titles[i] + "</li>"
       titles1.innerHTML += titles;
@@ -337,6 +393,8 @@ function createChar5(details) {
     }
 }
 function createChar6(details) {
+    /* Find id's in html, cards and modal
+------------------------------------------------*/
     let modalchar6 = document.getElementById("modalchar6");
     modalchar6.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
      let modaltitles1 = document.getElementById("modaltitles6");
@@ -344,7 +402,11 @@ function createChar6(details) {
      let char6 = document.getElementById("char6");
     let titles1 = document.getElementById("titles6");
     let aliases1 = document.getElementById("aliases6");
+    /* Adding information in the id's
+------------------------------------------------*/
     char6.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + baelishHouse + "</p>";
+    /* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
        titles1.innerHTML += titles;
@@ -359,6 +421,8 @@ function createChar6(details) {
     }
 }
 function createChar7(details) {
+    /* Find id's in html, cards and modal
+------------------------------------------------*/
     let modalchar7 = document.getElementById("modalchar7");
     modalchar7.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
     let modaltitles1 = document.getElementById("modaltitles7");
@@ -366,7 +430,11 @@ function createChar7(details) {
     let char7 = document.getElementById("char7");
     let titles1 = document.getElementById("titles7");
     let aliases1 = document.getElementById("aliases7");
+    /* Adding information in the id's
+------------------------------------------------*/
     char7.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + baratheonHouse + "</p>";
+    /* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -381,6 +449,8 @@ function createChar7(details) {
     }
 }
 function createChar8(details) {
+    /* Find id's in html, cards and modal
+------------------------------------------------*/
     let modalchar8 = document.getElementById("modalchar8");
     modalchar8.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
     let modaltitles1 = document.getElementById("modaltitles8");
@@ -388,7 +458,11 @@ function createChar8(details) {
     let char8 = document.getElementById("char8");
     let titles1 = document.getElementById("titles8");
     let aliases1 = document.getElementById("aliases8");
+    /* Adding information in the id's
+------------------------------------------------*/
     char8.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + targaryenHouse + "</p>";
+    /* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -403,6 +477,8 @@ function createChar8(details) {
     }
 }
 function createChar9(details) {
+    /* Find id's in html, cards and modal
+------------------------------------------------*/
      let modalchar9 = document.getElementById("modalchar9");
     modalchar9.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
     let modaltitles1 = document.getElementById("modaltitles9");
@@ -410,7 +486,11 @@ function createChar9(details) {
     let char9 = document.getElementById("char9");
     let titles1 = document.getElementById("titles9");
     let aliases1 = document.getElementById("aliases9");
+    /* Adding information in the id's
+------------------------------------------------*/
     char9.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + lannisterHouse + "</p>";
+    /* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -425,6 +505,8 @@ function createChar9(details) {
     }
 }
 function createChar10(details) {
+    /* Find id's in html, cards and modal
+------------------------------------------------*/
     let modalchar10 = document.getElementById("modalchar10");
     modalchar10.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
      let modaltitles1 = document.getElementById("modaltitles10");
@@ -432,7 +514,11 @@ function createChar10(details) {
      let char10 = document.getElementById("char10");
     let titles1 = document.getElementById("titles10");
     let aliases1 = document.getElementById("aliases10");
+    /* Adding information in the id's
+------------------------------------------------*/
     char10.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + lannisterHouse + "</p>";
+    /* Generate and add all titles and alisases for card and modal
+------------------------------------------------*/ 
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -446,7 +532,8 @@ function createChar10(details) {
         modalaliases10.innerHTML += aliases;
     }
 }
-
+/* Create click function for the cards
+------------------------------------------------*/ 
 document.getElementById("charOption1").addEventListener("click", option1);
 document.getElementById("charOption2").addEventListener("click", option2);
 document.getElementById("charOption3").addEventListener("click", option3);
@@ -457,22 +544,16 @@ document.getElementById("charOption7").addEventListener("click", option7);
 document.getElementById("charOption8").addEventListener("click", option8);
 document.getElementById("charOption9").addEventListener("click", option9);
 document.getElementById("charOption10").addEventListener("click", option10);
-
-
-
-/*document.getElementById("john").addEventListener("click", john);
-document.getElementById("ned").addEventListener("click", ned);
-document.getElementById("danny").addEventListener("click", danny);*/
-var pushi = 1;
-var characters = [];
-
+   
+/* Adding the chosen characters to player arrays
+------------------------------------------------*/ 
 var player1 = [];
 var player2 = [];
-var playercount = [];
 
 
+/* Generate "Yes" and "No" buttons to choose or unchose character
+------------------------------------------------*/
 function option1() {
-    
     if (player1.length === 0 && player2.length === 0) {
         openModal();
      document.getElementById("modalcontent").innerHTML = 
@@ -553,7 +634,8 @@ function option10() {
        openModal10(); document.getElementById("modalcontent10").innerHTML = "<div id='card2'><p>Player 2 has chosen Cersei Lannister</p><p>Do you want to play as Cersei Lannister?</p><button onclick='option10Yes()'>Yes!</button><button onclick='option1No()'>No...</button></div>";
     }
 }
-
+/* If player chooses yes for a character, checking for player 1 or 2
+------------------------------------------------*/
 function option1Yes() {
     if (player1.length === 0 && player2.length === 0) {
         modal.style.display = "none";
@@ -752,6 +834,8 @@ function option10Yes() {
         save();
     }
 }
+/* If player chooses "No", close all modals
+------------------------------------------------*/
 function option1No() {
     if (player1.length === 0 && player2.length === 0) {
         document.getElementById("player1").innerHTML = "";
@@ -782,7 +866,8 @@ function option1No() {
 }
 
 
-
+/* Save the chosen characters in sessionStorage
+------------------------------------------------*/
 function save() {
     if (player1.length === 1 && player2.length === 1)
     sessionStorage.setItem("playerUno", player1);
@@ -791,7 +876,8 @@ function save() {
     sessionStorage.setItem("images", storeImages);
 }
 
-// Get the modal
+/* Find the modal id's
+------------------------------------------------*/
 var modal = document.getElementById("myModal");
 var modal2 = document.getElementById("myModal2");
 var modal3 = document.getElementById("myModal3");
@@ -802,16 +888,11 @@ var modal7 = document.getElementById("myModal7");
 var modal8 = document.getElementById("myModal8");
 var modal9 = document.getElementById("myModal9");
 var modal10 = document.getElementById("myModal10");
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
+/* Display modals when clicks on card
+------------------------------------------------*/ 
 function openModal() {
-  modal.style.display = "block";
-    
+  modal.style.display = "block"; 
 }
 function openModal2() {
   modal2.style.display = "block";  
@@ -840,20 +921,11 @@ function openModal9() {
 function openModal10() {
   modal10.style.display = "block";  
 }
-// When the user clicks on <span> (x), close the modal
-function closeModal() {
-    modal.style.display = "none";
-    modal2.style.display = "none";
-}
-function closeModal2() {
-  modal2.style.display = "none";
-    
-}
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
-    modal.style.display = "none";
-     
+    modal.style.display = "none";  
   } else if (event.target == modal2) {
       modal2.style.display = "none";
   } else if (event.target == modal3) {
