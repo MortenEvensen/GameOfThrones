@@ -876,7 +876,7 @@ function trap3() {
         setTimeout(() => {
             document.getElementById("trap1modal-wrap").style.display = "block";
             document.getElementById("diceButton").disabled = true;
-            document.getElementById("trap1").innerHTML = "<p>A wild group og Vale Knigths appears! Since you are " + firstPlayer1 + " the Knights tells you in an unpolite way to leave the area! You 3 spaces backwards!</p><button id='modalButton' class='modalButton' onclick='closeModal()'>I don't like The Vale...</button>";
+            document.getElementById("trap1").innerHTML = "<p>A wild group og Vale Knigths appears! Since you are " + firstPlayer1 + " the Knights tells you in an unpolite way to leave the area! You move 3 spaces backwards!</p><button id='modalButton' class='modalButton' onclick='closeModal()'>I don't like The Vale...</button>";
 
             circleX1 = circleX1 + 450;
             //trapo = [];
@@ -900,7 +900,7 @@ function trap3() {
         setTimeout(() => {
             document.getElementById("trap1modal-wrap").style.display = "block";
             document.getElementById("diceButton").disabled = true;
-            document.getElementById("trap1").innerHTML = "<p>A wild group og Vale Knigths appears! Since you are " + secondPlayer2 + " the Knights tells you in an unpolite way to leave the area! You 3 spaces backwards!</p><button id='modalButton' class='modalButton' onclick='closeModal()'>I don't like The Vale...</button>";
+            document.getElementById("trap1").innerHTML = "<p>A wild group og Vale Knigths appears! Since you are " + secondPlayer2 + " the Knights tells you in an unpolite way to leave the area! You move 3 spaces backwards!</p><button id='modalButton' class='modalButton' onclick='closeModal()'>I don't like The Vale...</button>";
 
             circleX2 = circleX2 + 450;
             //trapo = [];
