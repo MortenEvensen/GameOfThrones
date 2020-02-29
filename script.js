@@ -1,3 +1,31 @@
+fetch("https://raw.githubusercontent.com/joakimskoog/AnApiOfIceAndFire/master/data/houses.json")
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    houses(json);
+    
+  })
+    .catch(function(error) {
+    console.log("Error");
+})
+
+var starkHouse = "";
+var lannisterHouse = ""
+var targaryenHouse = ""
+var baratheonHouse = ""
+var dothrakiHouse = ""
+var baelishHouse = ""
+function houses(details) {
+    starkHouse = details[361].Name;
+    lannisterHouse = details[228].Name;
+     targaryenHouse = details[377].Name;
+     baratheonHouse = details[14].Name;
+     dothrakiHouse = "Dothraki"
+    baelishHouse = details[9].Name;
+   
+}
+
 fetch("https://raw.githubusercontent.com/jeffreylancaster/game-of-thrones/master/data/characters.json")
   .then((response) => {
     return response.json();
@@ -67,8 +95,10 @@ function images(details) {
 }
 
 
+
+
 const baseUrl = "https://anapioficeandfire.com/api/characters/";
-let id = [583,1346,957,1052,565,823,901,271,529,238]
+let id = [583,1346,957,1052,565,823,901,1303,529,238]
 
 
 var characterUrl1 = `${baseUrl}${id[0]}`;
@@ -187,6 +217,13 @@ fetch(characterUrl10)
     console.log("Error");
 })
 
+
+
+
+
+
+
+
 function createChar1(details) {    
     let char1 = document.getElementById("char1");
     let modalchar1 = document.getElementById("modalchar1");
@@ -194,7 +231,7 @@ function createChar1(details) {
     let modaltitles1 = document.getElementById("modaltitles1");
     let aliases1 = document.getElementById("aliases1");
     let modalaliases1 = document.getElementById("modalaliases1");
-    char1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + starkHouse + "</p>";
     modalchar1.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p >Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
@@ -216,7 +253,7 @@ function createChar2(details) {
     let modaltitles1 = document.getElementById("modaltitles2");
     let aliases1 = document.getElementById("aliases2");
     let modalaliases1 = document.getElementById("modalaliases2");
-    char2.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char2.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + dothrakiHouse + "</p>";
     modalchar2.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
     var titles = "<li>" + details.titles[i] + "</li>"
@@ -239,7 +276,7 @@ function createChar3(details) {
     let aliases1 = document.getElementById("aliases3");
     let modalaliases1 = document.getElementById("modalaliases3");
     modalchar3.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
-    char3.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char3.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + starkHouse + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
        var titles = "<li>" + details.titles[i] + "</li>"
     titles1.innerHTML += titles;
@@ -255,14 +292,14 @@ function createChar3(details) {
 }
 function createChar4(details) {
     let modalchar4 = document.getElementById("modalchar4");
-    modalchar4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    modalchar4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
      let modaltitles1 = document.getElementById("modaltitles4");
     let modalaliases1 = document.getElementById("modalaliases4");
-    modalchar4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    
     let char4 = document.getElementById("char4");
     let titles1 = document.getElementById("titles4");
     let aliases1 = document.getElementById("aliases4");
-    char4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + lannisterHouse + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
     var titles = "<li>" + details.titles[i] + "</li>"
       titles4.innerHTML += titles;
@@ -281,11 +318,11 @@ function createChar5(details) {
     modalchar5.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
      let modaltitles1 = document.getElementById("modaltitles5");
     let modalaliases1 = document.getElementById("modalaliases5");
-    modalchar4.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p>Culture: " + details.culture + "</p>";
+    
      let char5 = document.getElementById("char5");
     let titles1 = document.getElementById("titles5");
     let aliases1 = document.getElementById("aliases5");
-    char5.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char5.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + lannisterHouse + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
      var titles = "<li>" + details.titles[i] + "</li>"
       titles1.innerHTML += titles;
@@ -307,7 +344,7 @@ function createChar6(details) {
      let char6 = document.getElementById("char6");
     let titles1 = document.getElementById("titles6");
     let aliases1 = document.getElementById("aliases6");
-    char6.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char6.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + baelishHouse + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
        titles1.innerHTML += titles;
@@ -329,7 +366,7 @@ function createChar7(details) {
     let char7 = document.getElementById("char7");
     let titles1 = document.getElementById("titles7");
     let aliases1 = document.getElementById("aliases7");
-    char7.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char7.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + baratheonHouse + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -351,7 +388,7 @@ function createChar8(details) {
     let char8 = document.getElementById("char8");
     let titles1 = document.getElementById("titles8");
     let aliases1 = document.getElementById("aliases8");
-    char8.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char8.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + targaryenHouse + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -373,7 +410,7 @@ function createChar9(details) {
     let char9 = document.getElementById("char9");
     let titles1 = document.getElementById("titles9");
     let aliases1 = document.getElementById("aliases9");
-    char9.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char9.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + lannisterHouse + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;
@@ -395,7 +432,7 @@ function createChar10(details) {
      let char10 = document.getElementById("char10");
     let titles1 = document.getElementById("titles10");
     let aliases1 = document.getElementById("aliases10");
-    char10.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>Culture: " + details.culture + "</p>";
+    char10.innerHTML = "<h3>Name: " + details.name + "</h3><p>Gender: " + details.gender + "</p>" + "<p class='name'>House: " + lannisterHouse + "</p>";
     for (var i = 0; i< details.titles.length; i++) {
         var titles = "<li>" + details.titles[i] + "</li>"
         titles1.innerHTML += titles;

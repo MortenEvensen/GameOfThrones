@@ -44,6 +44,9 @@ function draw() {
     /*
     The board
     */
+    
+
+    
      /*
    Bottom line
     */
@@ -392,39 +395,31 @@ function draw() {
     var x2 = "";
     var y2 = "";
     
-    ctx.beginPath();
-    ctx.moveTo(10,10);
-    ctx.lineTo(10,60);
-    ctx.lineTo(35,90);
-    ctx.lineTo(60,60);
-    ctx.lineTo(60,10);
-    ctx.lineTo(35,5);
-    ctx.lineTo(10,10);
-    //ctx.quadraticCurveTo(25, 25, 25, 62.5);
-    ctx.stroke();
-    /*
-    ctx.beginPath();
-    ctx.moveTo(1070,730);
-    ctx.lineTo(1070,800);
-    ctx.lineTo(1130,850);
-    ctx.lineTo(1190,800);
-    ctx.lineTo(1190,730);
-    ctx.lineTo(1130,720);
-    ctx.lineTo(1070,730);
-   
-    ctx.fillStyle = "red";
-    ctx.strokeStyle = "black";
-    ctx.stroke();
     
-    //ctx.quadraticCurveTo(25, 25, 25, 62.5);
+    /* Goal graphics
+    --------------*/
+    
+    ctx.beginPath();
+    ctx.rect(0,0,1200,150);
+    ctx.fillStyle = "#0b6623";
     ctx.fill();
     
-     ctx.beginPath();
-     ctx.font = "12px Verdana";
-    ctx.fillStyle = "#000000";
-    ctx.fillText("Player 1", 1105, 825)
-    ctx.fill();*/
+    var imageSword = document.getElementById("swordSource");
+    ctx.drawImage(imageSword, 15, 15, 110, 110);
+    var imageShield = document.getElementById("shieldSource");
+    ctx.drawImage(imageShield, 1065, 10, 110, 130);
     
+    ctx.beginPath();
+    ctx.font = "100px Verdana";
+    ctx.fillStyle = "#aaaaaa";
+    ctx.fillText("Goal", 475, 110);
+    ctx.fill();
+    
+    ctx.beginPath();
+    ctx.font = "20px Verdana";
+    ctx.strokeStyle = "#aaaaaa";
+    ctx.strokeText("41", 575, 25);
+    ctx.stroke();
     
     /* Graphics/traps
     ------------------*/
@@ -456,8 +451,9 @@ function draw() {
           //Player 2 game piece
     
     ctx.beginPath();
-    ctx.fillStyle = "#cccccc";
+    ctx.fillStyle = "#aaaaaa";
     ctx.strokeStyle = "#000000";
+    
     ctx.font = "10px Arial";
     ctx.arc(circleX2, circleY2, 65, 0, 2 * Math.PI);
     ctx.fill();

@@ -89,7 +89,7 @@ h1 {
 }
 
 .name {
-    margin-bottom: 200px;
+   margin-bottom: 200px; 
 }
 /* Characters
 ---------------*/
@@ -109,7 +109,8 @@ h1 {
 }
 
 .image-wrap {
-    height: 320px;
+    height: 300px;
+    text-align: center;
 }
 
 .modal-content {
@@ -177,8 +178,21 @@ p, li {
 .image, .modalimage {
     max-width: 100%;
     margin: 0 auto;
+    
 }
+#modalimage8 {
+    
+    text-align: center;
+    
+        
+}
+.modalimage {
+    min-height: 150px;
+}
+
 .image {
+    max-height: 280px;
+    min-height: 180px;
     
 }
 .player1, .player2 {
@@ -188,8 +202,7 @@ p, li {
 
 
 #image8 {
-    text-align: center;
-    height: 150px;
+text-align: center;
 }
 
 /*
@@ -292,7 +305,7 @@ button:active {
     background-color: white;
     font-size: 50px;
     border: 5px solid grey;
-    border-radius: 40%;
+    border-radius: 50px;
     
 }
 .divplay:hover {
@@ -306,9 +319,9 @@ button:active {
 .vs {
     line-height: 2em;
     text-align: center;
-    margin: 50px;
+    margin: 50px 0;
     font-size: 30px;
-    background-color: grey;
+    background-color: #0b6623;
     padding: 50px;
 }
 
@@ -398,16 +411,37 @@ button:active {
     }
     
     .character1 {
-        height: 150px;
-        width: 200px;
+        max-width: 250px;
+        max-height: 250px;
+       margin: 10px 0 100px 10px;
+        padding: 5px;
+        
+    }
+    .modalimage, #modalimage8 {
+    height: 150px;
+        
         min-width: 50px;
         max-width: 200px;
         
-    }
-    .image, .modalimage {
-    width: 250px;
     
 }
+    
+     .name {
+        margin-bottom: 0px;
+    }
+    .image {
+        width: 100px;
+        height: 100px;
+        max-height: 150px;
+        min-height: 100px;
+    }
+    #card1 {
+        max-width: 300px;
+    }
+    
+     .image-wrap {
+        height:  110px
+    }
      h1 {
         font-size: 20px;
          letter-spacing: 2px
@@ -415,8 +449,8 @@ button:active {
     h3 {
         font-size: 12px;
     }
-    p {
-        font-size: 12px;
+    p, li, ul {
+        font-size: 10px;
     }
     #image8 {
     text-align: center;
@@ -441,20 +475,34 @@ button:active {
     .character-wrap2 {
         
         height: 100px;
-        margin: 10px auto;
+        margin: 50px auto;
 
     }
     
     .character1 {
-        min-width: 20px;
-        max-width: 50px;
-        height: 100px;
-        margin: 130px 10px 530px 0;
+        max-width: 150px;
+        max-height: 100px;
+       margin: 10px 0 100px 10px;
+        padding: 5px;
         
         
     }
+    .name {
+        margin-bottom: 0px;
+    }
+    .image {
+        width: 100%;
+    }
+    #card1 {
+        max-width: 300px;
+    }
+    .image-wrap {
+        height:  60px
+    }
     .image, .modalimage {
-    
+        max-height: 150px;
+        max-width: 80px;
+        min-height: 50px;
 }
      h1 {
         font-size: 15px;
@@ -464,7 +512,7 @@ button:active {
         font-size: 10px;
     }
     p {
-        font-size: 8px;
+        font-size: 15px;
     }
     #image8 {
     text-align: center;
