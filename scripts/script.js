@@ -22,11 +22,10 @@ var baelishHouse = ""
 function houses(details) {
     starkHouse = details[361].Name;
     lannisterHouse = details[228].Name;
-     targaryenHouse = details[377].Name;
-     baratheonHouse = details[14].Name;
-     dothrakiHouse = "Dothraki"
+    targaryenHouse = details[377].Name;
+    baratheonHouse = details[14].Name;
     baelishHouse = details[9].Name;
-   
+    dothrakiHouse = "Dothraki"
 }
 /* Fetch links to images
 --------------------------*/
