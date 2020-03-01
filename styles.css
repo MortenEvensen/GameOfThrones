@@ -256,13 +256,14 @@ li {
 	border: 5px solid dimgrey;
 	margin: 10px 10px 10px 10px;
 	padding: 10px;
-	height: 400px;
+	max-height: 430px;
 	overflow: hidden;
 	box-shadow: 5px 5px black;
 	background-color: white;
 	border-radius: 10px;
 	color: black;
 	max-width: 250px;
+    min-width: 180px;
 }
 
 .character1:hover {
@@ -287,7 +288,7 @@ li {
 
 .image {
 	max-height: 280px;
-	min-height: 180px;
+	min-height: 140px;
 }
 
 .player1,
@@ -297,6 +298,7 @@ li {
 
 #image8 {
 	text-align: center;
+    min-height: 160px;
 }
 
 
@@ -387,6 +389,10 @@ button:active {
 }
 
 
+.game-wrap {
+    max-width: 100%;
+}
+
 /*
    Player 1 and 2
 ------------------*/
@@ -448,10 +454,13 @@ button:active {
 
 .canvas {
 	padding: 0;
-	margin: 120px 0 0 30px;
+	margin: 100px 100px 0 10px;
 	display: block;
-	width: 1200px;
-	height: 900px;
+    width: 70%;
+	max-width: 1100px;
+    min-width: 200px;
+    max-height: 850px;
+    min-height: 150px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -461,15 +470,17 @@ button:active {
 	background-color: white;
 }
 
-.canvas-wrap {}
+.canvas-wrap {
+    
+}
 
 .text-wrap {
-	position: relative;
-	left: 1300px;
-	top: 100px;
+	float: right;
 	border: 2px solid white;
 	width: 300px;
 	padding: 20px;
+    margin: 30px 2% 0 0;
+    width: 20%;
 }
 
 .footer {
@@ -533,12 +544,15 @@ button:active {
 @media only screen and (max-width: 1000px) and (min-width: 601px) {
 	.character-wrap2 {
 		margin: 0 auto;
+        max-width: 80%;
 	}
 	.character1 {
-		max-width: 250px;
-		max-height: 250px;
+		max-width: 120px;
+		max-height: 210px;
 		margin: 10px 0 100px 10px;
 		padding: 5px;
+        min-width: 80px;
+        
 	}
 	.modalimage,
 	#modalimage8 {
@@ -559,7 +573,7 @@ button:active {
 		max-width: 300px;
 	}
 	.image-wrap {
-		height: 110px
+		height: 100px
 	}
 	h1 {
 		font-size: 20px;
@@ -592,17 +606,21 @@ button:active {
 @media only screen and (max-width: 600px) {
 	#content-wrap {}
 	.character-wrap2 {
-		height: 100px;
+		height: 200px;
 		margin: 50px auto;
 	}
 	.character1 {
-		max-width: 150px;
-		max-height: 100px;
+		max-width: 100px;
+		max-height: 210px;
+        min-height: 180px;
 		margin: 10px 0 100px 10px;
 		padding: 5px;
+        min-width: 70px;
 	}
+    
+    
 	.name {
-		margin-bottom: 0px;
+		margin-bottom: 100px;
 	}
 	.image {
 		width: 100%;
@@ -625,9 +643,10 @@ button:active {
 	}
 	h3 {
 		font-size: 10px;
+        margin-top: 20px; 
 	}
 	p {
-		font-size: 15px;
+		font-size: 10px;
 	}
 	#image8 {
 		text-align: center;
