@@ -13,20 +13,22 @@ fetch("https://raw.githubusercontent.com/joakimskoog/AnApiOfIceAndFire/master/da
     console.log("Error");
 })
 
+
+function houses(house) {
+    baelishHouse = house[9].Name;
+    baratheonHouse = house[14].Name;
+    lannisterHouse = house[228].Name;
+    starkHouse = house[361].Name;
+    targaryenHouse = house[377].Name;
+    dothrakiHouse = "Dothraki"
+}
+
 var starkHouse = "";
 var lannisterHouse = ""
 var targaryenHouse = ""
 var baratheonHouse = ""
 var dothrakiHouse = ""
 var baelishHouse = ""
-function houses(details) {
-    starkHouse = details[361].Name;
-    lannisterHouse = details[228].Name;
-    targaryenHouse = details[377].Name;
-    baratheonHouse = details[14].Name;
-    baelishHouse = details[9].Name;
-    dothrakiHouse = "Dothraki"
-}
 /* Fetch links to images
 --------------------------*/
 fetch("https://raw.githubusercontent.com/jeffreylancaster/game-of-thrones/master/data/characters.json")
@@ -639,14 +641,12 @@ function option1Yes() {
     if (player1.length === 0 && player2.length === 0) {
         modal.style.display = "none";
         player1.push("John Snow");
-       
         document.getElementById("charOption1").remove();
         document.getElementById("player1").innerHTML = "<p>Player 1 has chosen " + player1[0] + "!</p>" + "<img class='imagePlayer' src='" + storeImages[0] + "'>"
         document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
     } else if (player1.length === 1 && player2.length === 0) {
         modal.style.display = "none";
         player2.push("John Snow");
-
         document.getElementById("charOption1").remove();
         document.getElementById("player2").innerHTML = "<p>Player 2 has chosen " + player2[0] + "!</p>" + "<img class='imagePlayer' src='" + storeImages[0] + "'>"
         document.getElementById("whichPlayer").innerHTML = "";
@@ -678,7 +678,6 @@ function option3Yes() {
     if (player1.length === 0 && player2.length === 0) {
         modal3.style.display = "none";
         player1.push("Sansa Stark")
-        
         document.getElementById("charOption3").remove();
         document.getElementById("player1").innerHTML = "<p>Player 1 has chosen " + player1[0] + "!</p>" + "<img class='imagePlayer' src='" + storeImages[2] + "'>"
         document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
@@ -777,7 +776,6 @@ function option8Yes() {
     if (player1.length === 0 && player2.length === 0) {
         modal8.style.display = "none";
         player1.push("Daenerys Targaryan")
-       
         document.getElementById("charOption8").remove();
         document.getElementById("player1").innerHTML = "<p>Player 1 has chosen " + player1[0] + "!</p>" + "<img class='imagePlayer' src='" + storeImages[7] + "'>"
         document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
@@ -797,7 +795,6 @@ function option9Yes() {
     if (player1.length === 0 && player2.length === 0) {
         modal9.style.display = "none";
         player1.push("Jamie Lannister")
-       
         document.getElementById("charOption9").remove();
         document.getElementById("player1").innerHTML = "<p>Player 1 has chosen " + player1[0] + "!</p>" + "<img class='imagePlayer' src='" + storeImages[8] + "'>"
         document.getElementById("whichPlayer").innerHTML = "Player 2 must choose:"
